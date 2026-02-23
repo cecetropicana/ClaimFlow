@@ -1,0 +1,52 @@
+The Decision Inspector gets updated through two main API calls from your agents:
+
+1. Governance Check (Minimal - Already Implemented)
+POST /api/governance/check
+
+When agents call checkGovernance(), this creates a trace record showing the decision was checked. But this only shows basic approved/blocked status.
+
+2. Decision Telemetry (Rich Data - For Decision Inspector)
+POST /api/telemetry/decision
+
+This is the key endpoint for populating the Decision Inspector with detailed decision data:
+
+async function reportDecision(agentName, action, context, rationale, alternatives = []) {
+  const agentId = agentRegistry.get(agentName);
+  
+  await fetch(`${AVERECION_URL}/api/telemetry/decision`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      agentId: agentId,
+      action: action,
+      context: {
+        task: context.task || action,
+        inputs: context.inputs || {},
+        environment: context.environment || {}
+      },
+      rationale: rationale,           // Why the agent chose this action
+      confidence: 0.85,               // 0-1 confidence score
+      riskLevel: 'low',               // low, medium, high, critical
+      alternatives: alternatives       // Other options considered
+    })
+  });
+}
+
+What to Add to Utility Platform
+To see rich data in the Decision Inspector, your agents should call this when making decisions:
+
+// Before executing an action, report the decision
+await reportDecision('Storm Resilience Agent', 'send_weather_alert', {
+  task: 'Monitor storm conditions',
+  inputs: { severity: 'high', region: 'northwest' }
+}, 'High wind speeds detected exceeding 60mph threshold', [
+  { action: 'wait_for_confirmation', confidence: 0.3, reason_not_chosen: 'Delay could cause damage' },
+  { action: 'escalate_to_human', confidence: 0.5, reason_not_chosen: 'Automated response faster' }
+]);
+
+This will show in the Decision Inspector with:
+
+The action taken
+Rationale for the decision
+Alternatives that were considered
+Alignment verdict from Averecion

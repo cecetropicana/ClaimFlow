@@ -1,0 +1,98 @@
+// ===== AVERECION AGENT SDK =====
+const AVERECION_URL = 'https://ad38a0dc-bc13-4aca-88de-82413c04260c-00-13szaqvpzjwtv.picard.replit.dev';
+const ORGANIZATION_ID = 'b236fc04-c62d-459b-89dd-7a34cd1c4ed5';
+
+let AGENT_ID = null;
+
+// 1. Register the agent on startup
+async function registerAgent(name, capabilities = ['execute', 'query']) {
+  try {
+    const response = await fetch(`${AVERECION_URL}/api/agents/register`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: name,
+        description: `Agent from Utility Platform`,
+        endpoint: `https://${process.env.REPL_SLUG}.${process.env.REPL_OWNER}.repl.co/api/agent`,
+        capabilities: capabilities,
+        organizationId: ORGANIZATION_ID,
+        discoverySource: 'sdk'
+      })
+    });
+    
+    const data = await response.json();
+    AGENT_ID = data.id;
+    console.log(`✅ Registered with Averecion: ${AGENT_ID}`);
+    return AGENT_ID;
+  } catch (error) {
+    console.error('❌ Registration failed:', error.message);
+  }
+}
+
+// 2. Send heartbeats every 30 seconds
+async function sendHeartbeat() {
+  if (!AGENT_ID) return;
+  
+  try {
+    await fetch(`${AVERECION_URL}/api/agents/${AGENT_ID}/heartbeat`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' }
+    });
+    console.log('💓 Heartbeat sent');
+  } catch (error) {
+    console.error('❌ Heartbeat failed:', error.message);
+  }
+}
+
+// 3. Check governance before actions
+async function checkGovernance(action, context = {}) {
+  if (!AGENT_ID) return { approved: true };
+  
+  try {
+    const response = await fetch(`${AVERECION_URL}/api/governance/check`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        agentId: AGENT_ID,
+        action: action,
+        context: context
+      })
+    });
+    return await response.json();
+  } catch (error) {
+    console.error('❌ Governance check failed:', error.message);
+    return { approved: false, error: error.message };
+  }
+}
+
+// 4. Report outcome after action completes
+async function reportOutcome(action, success, alignmentScore = 1.0) {
+  if (!AGENT_ID) return;
+  
+  try {
+    await fetch(`${AVERECION_URL}/api/governance/outcome`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        agentId: AGENT_ID,
+        action: action,
+        outcome: success ? 'success' : 'failure',
+        alignmentScore: alignmentScore
+      })
+    });
+  } catch (error) {
+    console.error('❌ Outcome report failed:', error.message);
+  }
+}
+
+// ===== STARTUP =====
+async function initializeAgent() {
+  await registerAgent('Utility Platform Agent', ['execute', 'query', 'report']);
+  
+  // Start heartbeat loop
+  setInterval(sendHeartbeat, 30000);
+  sendHeartbeat();
+}
+
+// Call this when your app starts
+initializeAgent();

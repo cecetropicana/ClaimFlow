@@ -1,2 +1,0 @@
-# ClaimFlow
-Claims Management System

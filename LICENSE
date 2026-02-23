@@ -1,0 +1,124 @@
+PROPRIETARY SOFTWARE LICENSE
+
+Copyright (c) 2025 Cece Anderson / AverNova LLC. All Rights Reserved.
+
+NOTICE: This is proprietary software. All rights are reserved by the copyright holder.
+
+TERMS AND CONDITIONS
+
+1. OWNERSHIP
+   This software and all associated intellectual property rights are the 
+   exclusive property of the owner. This includes, but is not limited to, 
+   source code, object code, documentation, design, architecture, algorithms, 
+   and user interface elements.
+
+2. RESTRICTIONS
+   Unless explicitly authorized in writing by the owner, you may NOT:
+   - Use this software for any purpose
+   - Copy, modify, or distribute this software
+   - Reverse engineer, decompile, or disassemble this software
+   - Create derivative works based on this software
+   - Sublicense, sell, or transfer this software
+   - Remove or alter any proprietary notices
+
+3. NO LICENSE GRANTED
+   No license, express or implied, is granted under any intellectual property 
+   rights of the owner. Viewing or accessing this code does not constitute a 
+   grant of any rights.
+
+4. CONFIDENTIALITY
+   This software contains confidential and proprietary information. Any 
+   unauthorized disclosure is strictly prohibited and may result in legal action.
+
+5. DISCLAIMER
+   THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+   IMPLIED. THE OWNER DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO 
+   THE WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+6. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL THE OWNER BE LIABLE FOR ANY DAMAGES ARISING FROM THE USE 
+   OR INABILITY TO USE THIS SOFTWARE.
+
+7. ENFORCEMENT
+   Unauthorized use of this software may result in civil and criminal penalties. 
+   The owner reserves the right to pursue all available legal remedies.
+
+For licensing inquiries, please contact the owner.
+
+---
+
+PATENT CLAIMS
+
+The following inventions and methods are claimed as intellectual property of 
+AverNova LLC and may be subject to patent protection:
+
+CLAIM 1: CONDITIONAL ACTION GENERATION SYSTEM FOR UTILITY OPERATIONS
+A computer-implemented method for automatically generating operational actions 
+based on AI analysis thresholds, comprising:
+   a) Receiving analysis results from specialized AI agents regarding utility 
+      infrastructure conditions;
+   b) Evaluating said results against configurable threshold values;
+   c) Conditionally generating one or more action types including alerts, work 
+      orders, scheduled maintenance, asset status updates, event logs, and 
+      notifications based on threshold evaluation;
+   d) Wherein different action types are triggered at different threshold 
+      levels, enabling graduated response to infrastructure conditions.
+
+CLAIM 2: MULTI-AGENT ORCHESTRATION SYSTEM FOR UTILITY PLANNING
+A system and method for coordinating multiple specialized AI agents for 
+utility infrastructure analysis, comprising:
+   a) A supervisor agent that receives natural language queries regarding 
+      utility operations;
+   b) Query analysis to determine appropriate routing to one or more 
+      specialized domain agents;
+   c) Specialized agents including but not limited to: storm resilience 
+      analysis, load forecasting, grid topology tracing, and capacity checking;
+   d) Aggregation and presentation of multi-agent results through a unified 
+      interface.
+
+CLAIM 3: HUMAN-IN-THE-LOOP APPROVAL WORKFLOW WITH METRICS FEEDBACK
+A method for managing AI agent decision execution with human oversight, 
+comprising:
+   a) Intercepting agent-proposed actions based on trust level classification;
+   b) Queuing said actions for human review in a pending approvals interface;
+   c) Recording human approval or rejection decisions;
+   d) Automatically updating agent performance metrics including decision 
+      count, success rate, and trust score based on approval outcomes;
+   e) Using updated metrics to inform future autonomy level progression.
+
+CLAIM 4: DOMAIN-SPECIFIC AI AGENTS FOR UTILITY INFRASTRUCTURE ANALYSIS
+Specialized AI agent implementations for utility planning operations, including:
+   a) Storm Resilience Agent: Analyzing weather event impacts, outage risks, 
+      vegetation management, and emergency preparedness;
+   b) Load Forecast Agent: Projecting demand growth, analyzing consumption 
+      patterns, and forecasting infrastructure requirements;
+   c) Grid Topology Agent: Performing network traces, connectivity analysis, 
+      and power flow verification;
+   d) Capacity Check Agent: Evaluating headroom availability, connection 
+      feasibility, and upgrade requirements for new loads.
+
+CLAIM 5: ADAPTIVE CARD RENDERING FOR UTILITY DATA VISUALIZATION
+A method for presenting utility infrastructure analysis through adaptive card 
+interfaces, comprising:
+   a) Dynamic card generation based on agent response type and content;
+   b) Structured data presentation with expandable sections for detailed 
+      analysis;
+   c) Embedded action buttons for workflow initiation directly from analysis 
+      results;
+   d) Real-time status indicators for infrastructure components.
+
+---
+
+PATENT NOTICE: The methods, systems, and implementations described above 
+represent novel inventions. Any use, reproduction, or implementation of these 
+claimed inventions without explicit written authorization from AverNova LLC 
+may constitute patent infringement.
+
+PROVISIONAL STATUS: These claims are documented for intellectual property 
+protection purposes. Formal patent applications may be filed with the United 
+States Patent and Trademark Office (USPTO) and international patent offices.
+
+---
+ForeSight - Proprietary Software
+Copyright (c) 2025 Cece Anderson / AverNova LLC
+All Rights Reserved

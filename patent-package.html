@@ -1,0 +1,4028 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ForeSight Patent Package</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 20mm 15mm;
+    }
+    
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      font-size: 11pt;
+      line-height: 1.5;
+      color: #1a1a1a;
+      max-width: 100%;
+    }
+    
+    .cover {
+      page-break-after: always;
+      text-align: center;
+      padding-top: 150px;
+    }
+    
+    .cover h1 {
+      font-size: 36pt;
+      color: #0066cc;
+      margin-bottom: 20px;
+    }
+    
+    .cover .subtitle {
+      font-size: 18pt;
+      color: #666;
+      margin-bottom: 60px;
+    }
+    
+    .cover .patent-notice {
+      background: #fff3cd;
+      border: 2px solid #ffc107;
+      padding: 20px;
+      border-radius: 8px;
+      display: inline-block;
+      margin: 40px 0;
+    }
+    
+    .cover .patent-notice h3 {
+      color: #856404;
+      margin: 0 0 10px 0;
+    }
+    
+    .cover .copyright {
+      font-size: 12pt;
+      color: #666;
+      margin-top: 80px;
+    }
+    
+    h1 {
+      color: #0066cc;
+      border-bottom: 2px solid #0066cc;
+      padding-bottom: 10px;
+      page-break-after: avoid;
+    }
+    
+    h2 {
+      color: #333;
+      margin-top: 30px;
+      page-break-after: avoid;
+    }
+    
+    h3 {
+      color: #555;
+      margin-top: 20px;
+      page-break-after: avoid;
+    }
+    
+    .section {
+      page-break-before: always;
+    }
+    
+    .file-section {
+      margin: 20px 0;
+      page-break-inside: avoid;
+    }
+    
+    .file-header {
+      background: #f0f0f0;
+      padding: 8px 12px;
+      border-radius: 4px 4px 0 0;
+      border: 1px solid #ddd;
+      border-bottom: none;
+      font-family: 'Consolas', 'Monaco', monospace;
+      font-size: 10pt;
+      color: #333;
+    }
+    
+    pre {
+      background: #f8f8f8;
+      border: 1px solid #ddd;
+      border-radius: 0 0 4px 4px;
+      padding: 12px;
+      overflow-x: auto;
+      font-size: 9pt;
+      line-height: 1.4;
+      margin: 0;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    
+    code {
+      font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    }
+    
+    .toc {
+      page-break-after: always;
+    }
+    
+    .toc ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .toc li {
+      padding: 5px 0;
+      border-bottom: 1px dotted #ccc;
+    }
+    
+    .manifest {
+      white-space: pre-wrap;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    
+    .license {
+      white-space: pre-wrap;
+      font-family: 'Consolas', monospace;
+      font-size: 9pt;
+      background: #f5f5f5;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    
+    th {
+      background: #f0f0f0;
+    }
+    
+    .keyword { color: #0000ff; }
+    .string { color: #a31515; }
+    .comment { color: #008000; }
+    .function { color: #795e26; }
+    .type { color: #267f99; }
+  </style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>ForeSight</h1>
+  <div class="subtitle">Patent Package - Source Code Documentation</div>
+  
+  <div class="patent-notice">
+    <h3>⚠️ PATENT PENDING</h3>
+    <p>This document contains proprietary inventions protected under provisional patent application.</p>
+  </div>
+  
+  <div class="copyright">
+    <p><strong>Copyright © 2025 Cece Anderson / AverNova LLC</strong></p>
+    <p>All Rights Reserved</p>
+    <p>Generated: January 18, 2026</p>
+  </div>
+</div>
+
+<div class="toc">
+  <h1>Table of Contents</h1>
+  <ul>
+    <li><strong>1. License and Patent Claims</strong></li>
+    <li><strong>2. Manifest (Technical Index)</strong></li>
+    <li><strong>3. Claim 1: Conditional Action Generation System</strong></li>
+    <li><strong>4. Claim 2: Multi-Agent Orchestration Architecture</strong></li>
+    <li><strong>5. Claim 3: Human-in-the-Loop Approval Workflows</strong></li>
+    <li><strong>6. Claim 4: Domain-Specific Agent Analysis System</strong></li>
+    <li><strong>7. Claim 5: Adaptive Card Rendering System</strong></li>
+    <li><strong>8. Shared Type Definitions</strong></li>
+  </ul>
+</div>
+
+<div class="section">
+  <h1>1. License and Patent Claims</h1>
+  <pre class="license">PROPRIETARY SOFTWARE LICENSE
+
+Copyright (c) 2025 Cece Anderson / AverNova LLC. All Rights Reserved.
+
+NOTICE: This is proprietary software. All rights are reserved by the copyright holder.
+
+TERMS AND CONDITIONS
+
+1. OWNERSHIP
+   This software and all associated intellectual property rights are the 
+   exclusive property of the owner. This includes, but is not limited to, 
+   source code, object code, documentation, design, architecture, algorithms, 
+   and user interface elements.
+
+2. RESTRICTIONS
+   Unless explicitly authorized in writing by the owner, you may NOT:
+   - Use this software for any purpose
+   - Copy, modify, or distribute this software
+   - Reverse engineer, decompile, or disassemble this software
+   - Create derivative works based on this software
+   - Sublicense, sell, or transfer this software
+   - Remove or alter any proprietary notices
+
+3. NO LICENSE GRANTED
+   No license, express or implied, is granted under any intellectual property 
+   rights of the owner. Viewing or accessing this code does not constitute a 
+   grant of any rights.
+
+4. CONFIDENTIALITY
+   This software contains confidential and proprietary information. Any 
+   unauthorized disclosure is strictly prohibited and may result in legal action.
+
+5. DISCLAIMER
+   THIS SOFTWARE IS PROVIDED &quot;AS IS&quot; WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+   IMPLIED. THE OWNER DISCLAIMS ALL WARRANTIES, INCLUDING BUT NOT LIMITED TO 
+   THE WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+6. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL THE OWNER BE LIABLE FOR ANY DAMAGES ARISING FROM THE USE 
+   OR INABILITY TO USE THIS SOFTWARE.
+
+7. ENFORCEMENT
+   Unauthorized use of this software may result in civil and criminal penalties. 
+   The owner reserves the right to pursue all available legal remedies.
+
+For licensing inquiries, please contact the owner.
+
+---
+
+PATENT CLAIMS
+
+The following inventions and methods are claimed as intellectual property of 
+AverNova LLC and may be subject to patent protection:
+
+CLAIM 1: CONDITIONAL ACTION GENERATION SYSTEM FOR UTILITY OPERATIONS
+A computer-implemented method for automatically generating operational actions 
+based on AI analysis thresholds, comprising:
+   a) Receiving analysis results from specialized AI agents regarding utility 
+      infrastructure conditions;
+   b) Evaluating said results against configurable threshold values;
+   c) Conditionally generating one or more action types including alerts, work 
+      orders, scheduled maintenance, asset status updates, event logs, and 
+      notifications based on threshold evaluation;
+   d) Wherein different action types are triggered at different threshold 
+      levels, enabling graduated response to infrastructure conditions.
+
+CLAIM 2: MULTI-AGENT ORCHESTRATION SYSTEM FOR UTILITY PLANNING
+A system and method for coordinating multiple specialized AI agents for 
+utility infrastructure analysis, comprising:
+   a) A supervisor agent that receives natural language queries regarding 
+      utility operations;
+   b) Query analysis to determine appropriate routing to one or more 
+      specialized domain agents;
+   c) Specialized agents including but not limited to: storm resilience 
+      analysis, load forecasting, grid topology tracing, and capacity checking;
+   d) Aggregation and presentation of multi-agent results through a unified 
+      interface.
+
+CLAIM 3: HUMAN-IN-THE-LOOP APPROVAL WORKFLOW WITH METRICS FEEDBACK
+A method for managing AI agent decision execution with human oversight, 
+comprising:
+   a) Intercepting agent-proposed actions based on trust level classification;
+   b) Queuing said actions for human review in a pending approvals interface;
+   c) Recording human approval or rejection decisions;
+   d) Automatically updating agent performance metrics including decision 
+      count, success rate, and trust score based on approval outcomes;
+   e) Using updated metrics to inform future autonomy level progression.
+
+CLAIM 4: DOMAIN-SPECIFIC AI AGENTS FOR UTILITY INFRASTRUCTURE ANALYSIS
+Specialized AI agent implementations for utility planning operations, including:
+   a) Storm Resilience Agent: Analyzing weather event impacts, outage risks, 
+      vegetation management, and emergency preparedness;
+   b) Load Forecast Agent: Projecting demand growth, analyzing consumption 
+      patterns, and forecasting infrastructure requirements;
+   c) Grid Topology Agent: Performing network traces, connectivity analysis, 
+      and power flow verification;
+   d) Capacity Check Agent: Evaluating headroom availability, connection 
+      feasibility, and upgrade requirements for new loads.
+
+CLAIM 5: ADAPTIVE CARD RENDERING FOR UTILITY DATA VISUALIZATION
+A method for presenting utility infrastructure analysis through adaptive card 
+interfaces, comprising:
+   a) Dynamic card generation based on agent response type and content;
+   b) Structured data presentation with expandable sections for detailed 
+      analysis;
+   c) Embedded action buttons for workflow initiation directly from analysis 
+      results;
+   d) Real-time status indicators for infrastructure components.
+
+---
+
+PATENT NOTICE: The methods, systems, and implementations described above 
+represent novel inventions. Any use, reproduction, or implementation of these 
+claimed inventions without explicit written authorization from AverNova LLC 
+may constitute patent infringement.
+
+PROVISIONAL STATUS: These claims are documented for intellectual property 
+protection purposes. Formal patent applications may be filed with the United 
+States Patent and Trademark Office (USPTO) and international patent offices.
+
+---
+ForeSight - Proprietary Software
+Copyright (c) 2025 Cece Anderson / AverNova LLC
+All Rights Reserved
+</pre>
+</div>
+
+<div class="section">
+  <h1>2. Manifest (Technical Index)</h1>
+  <pre class="manifest"># ForeSight Patent Package Manifest
+
+**Copyright (c) 2025 Cece Anderson / AverNova LLC**  
+**Status: PATENT PENDING**
+
+---
+
+## Overview
+
+This package contains the source code implementations relevant to the patent claims filed for the ForeSight utility planning application. Each claim represents a novel invention in the field of AI-powered utility infrastructure management with governed multi-agent systems.
+
+---
+
+## Patent Claims Index
+
+### Claim 1: Conditional Action Generation System
+
+**Folder:** `claim-1-action-generation/`
+
+**Files:**
+| File | Description |
+|------|-------------|
+| `action-handler.ts` | Core action handler that conditionally generates operational outputs (alerts, work orders, maintenance schedules, notifications) based on analysis thresholds |
+
+**Key Innovation:**
+A system that analyzes AI agent outputs and conditionally creates actionable operational items based on configurable thresholds. For example:
+- Capacity checks &gt; 25 MW → Generate alert
+- Capacity checks &gt; 50 MW → Generate work order, asset update, and notification
+- Storm severity HIGH/CRITICAL → Generate alert, notification, maintenance schedule
+
+**Relevant Code Sections:**
+- `createAlert()` - Threshold-based alert generation
+- `scheduleMaintenance()` - Conditional maintenance scheduling  
+- `createWorkOrder()` - Priority-based work order creation
+- `sendNotification()` - Event-driven notification dispatch
+
+---
+
+### Claim 2: Multi-Agent Orchestration Architecture
+
+**Folder:** `claim-2-multi-agent-orchestration/`
+
+**Files:**
+| File | Description |
+|------|-------------|
+| `orchestrator.ts` | Central orchestrator that routes queries to specialized agents based on intent classification |
+| `base-agent.ts` | Abstract base class implementing governance checks, trust management, and decision telemetry |
+
+**Key Innovation:**
+A hierarchical multi-agent system where:
+1. A Supervisor Agent classifies user intent
+2. Queries are routed to domain-specific specialist agents
+3. Each agent operates within trust level constraints
+4. Pre-execution governance checks validate actions
+5. Decision telemetry is reported to external governance platform
+
+**Relevant Code Sections:**
+- `AgentOrchestrator.processQuery()` - Main routing logic
+- `AgentOrchestrator.getAgent()` - Agent resolution by type
+- `BaseAgent.execute()` - Governance-wrapped execution
+- `BaseAgent.checkGovernance()` - Pre-execution validation
+- `BaseAgent.updateMetrics()` - Trust score calculation
+
+---
+
+### Claim 3: Human-in-the-Loop Approval Workflows
+
+**Folder:** `claim-3-hitl-approval/`
+
+**Files:**
+| File | Description |
+|------|-------------|
+| `approval-routes.ts` | API endpoints for managing approval queue |
+| `approvals.tsx` | React UI component for human review interface |
+
+**Key Innovation:**
+A system where high-risk agent actions are queued for human review before execution:
+1. Agent proposes action that exceeds trust level
+2. Action added to approval queue with full context
+3. Human reviewer sees pending approvals in dashboard
+4. Reviewer can approve/reject with notes
+5. Decision affects agent&#039;s trust score progression
+6. Successful patterns lead to earned autonomy
+
+**Relevant Code Sections:**
+- `GET /api/agent/approvals` - Fetch pending approvals
+- `POST /api/agent/approvals/:id` - Submit approval decision
+- `ApprovalQueue` component - Pending items display
+- `handleApproval()` - Decision processing with metrics update
+
+---
+
+### Claim 4: Domain-Specific Agent Analysis System
+
+**Folder:** `claim-4-domain-agents/`
+
+**Files:**
+| File | Description |
+|------|-------------|
+| `storm-agent.ts` | Storm resilience and weather impact analysis |
+| `load-forecast-agent.ts` | Demand projection and load forecasting |
+| `grid-topology-agent.ts` | Network tracing and connectivity analysis |
+| `capacity-agent.ts` | Capacity checking for new connections |
+
+**Key Innovation:**
+Specialized AI agents for utility domain analysis:
+1. Each agent has domain-specific prompts and capabilities
+2. Agents produce structured analysis results
+3. Results conditionally trigger actions (Claim 1)
+4. All operate under governance framework (Claim 2)
+5. High-risk analyses require human approval (Claim 3)
+
+**Relevant Code Sections:**
+- `StormResilienceAgent.executeAction()` - Weather vulnerability assessment
+- `LoadForecastAgent.executeAction()` - Demand projection with time series
+- `GridTopologyAgent.executeAction()` - Network trace with connectivity analysis
+- `CapacityCheckAgent.executeAction()` - Headroom analysis with upgrade recommendations
+
+---
+
+### Claim 5: Adaptive Card Rendering System
+
+**Folder:** `claim-5-adaptive-cards/`
+
+**Files:**
+| File | Description |
+|------|-------------|
+| `adaptive-cards/` | Domain-specific card components |
+| `├── capacity-check-card.tsx` | Capacity analysis visualization |
+| `├── data-center-impact-card.tsx` | Data center impact display |
+| `├── load-forecast-card.tsx` | Load forecast with charts |
+| `├── network-trace-card.tsx` | Network topology visualization |
+| `├── storm-resilience-card.tsx` | Storm assessment display |
+| `chat/` | Chat interface components |
+| `├── chat-message.tsx` | Message renderer with card detection |
+| `├── chat-input.tsx` | Input with quick prompts |
+
+**Key Innovation:**
+A dynamic card rendering system that:
+1. Detects card type from agent response metadata
+2. Selects appropriate domain-specific card component
+3. Renders rich, interactive visualizations
+4. Integrates with conversational chat interface
+5. Follows Fluent Design System for utility sector UX
+
+**Relevant Code Sections:**
+- `ChatMessage.renderCard()` - Card type detection and rendering
+- `CapacityCheckCard` - Substation proximity, capacity status visualization
+- `LoadForecastCard` - Time series charts with Recharts
+- `NetworkTraceCard` - Path visualization with status indicators
+- `StormResilienceCard` - Risk assessment with progress indicators
+
+---
+
+## Shared Dependencies
+
+**Folder:** `shared/`
+
+**Files:**
+| File | Description |
+|------|-------------|
+| `types.ts` | TypeScript type definitions for agents, contexts, and governance |
+
+---
+
+## License
+
+See `LICENSE` file for full copyright notice and patent claims.
+
+---
+
+## Technical Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    ForeSight Architecture                        │
+├─────────────────────────────────────────────────────────────────┤
+│  EXPERIENCE LAYER (Claim 5)                                      │
+│  ┌───────────────┐  ┌───────────────┐  ┌───────────────┐        │
+│  │ Chat Interface│  │ Adaptive Cards│  │ Approval UI   │        │
+│  └───────┬───────┘  └───────┬───────┘  └───────┬───────┘        │
+├──────────┼──────────────────┼──────────────────┼────────────────┤
+│  AGENT ORCHESTRATION LAYER (Claim 2)                             │
+│  ┌───────────────────────────────────────────────────────┐      │
+│  │              Supervisor Agent (Router)                 │      │
+│  └───────┬──────────┬──────────┬──────────┬──────────────┘      │
+│          │          │          │          │                      │
+│  ┌───────▼───┐ ┌────▼────┐ ┌───▼────┐ ┌───▼───────┐             │
+│  │Storm Agent│ │Load Agent│ │Grid    │ │Capacity   │  (Claim 4) │
+│  └───────────┘ └──────────┘ │Agent   │ │Agent      │             │
+│                             └────────┘ └───────────┘             │
+├─────────────────────────────────────────────────────────────────┤
+│  GOVERNANCE LAYER (Claims 1, 3)                                  │
+│  ┌────────────────┐  ┌────────────────┐  ┌────────────────┐     │
+│  │ Pre-Execution  │  │ Human-in-Loop  │  │ Action Handler │     │
+│  │ Governance     │  │ Approval Queue │  │ (Conditional)  │     │
+│  └────────────────┘  └────────────────┘  └────────────────┘     │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Contact
+
+For patent inquiries, contact the inventor:
+- **Inventor:** Cece Anderson
+- **Entity:** AverNova LLC
+- **Year:** 2025
+</pre>
+</div>
+
+<div class="section">
+  <h1>3. Claim 1: Conditional Action Generation System</h1>
+
+  <div class="file-section">
+    <div class="file-header">📄 action-handler.ts</div>
+    <pre><code>import { db } from &quot;../db&quot;;
+import {
+  agentAlerts,
+  scheduledMaintenance,
+  workOrders,
+  assetStatusUpdates,
+  eventLog,
+  notifications,
+  AgentAlert,
+  ScheduledMaintenance,
+  WorkOrder,
+  AssetStatusUpdate,
+  EventLogEntry,
+  Notification,
+} from &quot;@shared/schema&quot;;
+import { desc, eq } from &quot;drizzle-orm&quot;;
+
+function parseJsonField&lt;T&gt;(value: string | null | undefined): T | null {
+  if (!value) return null;
+  try {
+    return JSON.parse(value) as T;
+  } catch {
+    return null;
+  }
+}
+
+function parseAlertMetadata(alert: AgentAlert): AgentAlert &amp; { parsedMetadata?: Record&lt;string, unknown&gt; } {
+  return {
+    ...alert,
+    parsedMetadata: parseJsonField&lt;Record&lt;string, unknown&gt;&gt;(alert.metadata),
+  };
+}
+
+function parseAssetMetadata(update: AssetStatusUpdate): AssetStatusUpdate &amp; { parsedMetadata?: Record&lt;string, unknown&gt; } {
+  return {
+    ...update,
+    parsedMetadata: parseJsonField&lt;Record&lt;string, unknown&gt;&gt;(update.metadata),
+  };
+}
+
+function parseEventMetadata(event: EventLogEntry): EventLogEntry &amp; { parsedMetadata?: Record&lt;string, unknown&gt; } {
+  return {
+    ...event,
+    parsedMetadata: parseJsonField&lt;Record&lt;string, unknown&gt;&gt;(event.metadata),
+  };
+}
+
+function parseNotificationMetadata(notification: Notification): Notification &amp; { parsedMetadata?: Record&lt;string, unknown&gt; } {
+  return {
+    ...notification,
+    parsedMetadata: parseJsonField&lt;Record&lt;string, unknown&gt;&gt;(notification.metadata),
+  };
+}
+
+export interface ActionResult&lt;T&gt; {
+  success: boolean;
+  data?: T;
+  error?: string;
+}
+
+function generateWorkOrderNumber(): string {
+  const prefix = &quot;WO&quot;;
+  const timestamp = Date.now().toString(36).toUpperCase();
+  const random = Math.random().toString(36).substring(2, 6).toUpperCase();
+  return `${prefix}-${timestamp}-${random}`;
+}
+
+export class ActionHandler {
+  async createAlert(
+    agentId: string,
+    params: {
+      alertType: string;
+      title: string;
+      message: string;
+      severity?: string;
+      relatedAssetId?: string;
+      relatedAssetType?: string;
+      metadata?: Record&lt;string, unknown&gt;;
+    }
+  ): Promise&lt;ActionResult&lt;AgentAlert&gt;&gt; {
+    try {
+      const [alert] = await db
+        .insert(agentAlerts)
+        .values({
+          agentId,
+          alertType: params.alertType,
+          title: params.title,
+          message: params.message,
+          severity: params.severity || &quot;medium&quot;,
+          status: &quot;active&quot;,
+          relatedAssetId: params.relatedAssetId,
+          relatedAssetType: params.relatedAssetType,
+          metadata: params.metadata ? JSON.stringify(params.metadata) : undefined,
+        })
+        .returning();
+
+      console.log(`[ActionHandler] Created alert: ${alert.title} (ID: ${alert.id})`);
+      return { success: true, data: alert };
+    } catch (error) {
+      console.error(&quot;[ActionHandler] Failed to create alert:&quot;, error);
+      return { success: false, error: String(error) };
+    }
+  }
+
+  async scheduleMaintenance(
+    agentId: string,
+    params: {
+      title: string;
+      description?: string;
+      assetId: string;
+      assetType: string;
+      assetName?: string;
+      maintenanceType: string;
+      priority?: string;
+      scheduledStart: Date;
+      scheduledEnd: Date;
+      estimatedCustomersAffected?: number;
+      notes?: string;
+    }
+  ): Promise&lt;ActionResult&lt;ScheduledMaintenance&gt;&gt; {
+    try {
+      const [maintenance] = await db
+        .insert(scheduledMaintenance)
+        .values({
+          agentId,
+          title: params.title,
+          description: params.description,
+          assetId: params.assetId,
+          assetType: params.assetType,
+          assetName: params.assetName,
+          maintenanceType: params.maintenanceType,
+          priority: params.priority || &quot;normal&quot;,
+          status: &quot;scheduled&quot;,
+          scheduledStart: params.scheduledStart,
+          scheduledEnd: params.scheduledEnd,
+          estimatedCustomersAffected: params.estimatedCustomersAffected,
+          notes: params.notes,
+        })
+        .returning();
+
+      console.log(`[ActionHandler] Scheduled maintenance: ${maintenance.title} (ID: ${maintenance.id})`);
+      return { success: true, data: maintenance };
+    } catch (error) {
+      console.error(&quot;[ActionHandler] Failed to schedule maintenance:&quot;, error);
+      return { success: false, error: String(error) };
+    }
+  }
+
+  async createWorkOrder(
+    agentId: string,
+    params: {
+      title: string;
+      description?: string;
+      workType: string;
+      priority?: string;
+      assetId?: string;
+      assetType?: string;
+      assetName?: string;
+      assignedTo?: string;
+      assignedTeam?: string;
+      estimatedHours?: number;
+      dueDate?: Date;
+      notes?: string;
+    }
+  ): Promise&lt;ActionResult&lt;WorkOrder&gt;&gt; {
+    try {
+      const workOrderNumber = generateWorkOrderNumber();
+      const [workOrder] = await db
+        .insert(workOrders)
+        .values({
+          agentId,
+          workOrderNumber,
+          title: params.title,
+          description: params.description,
+          workType: params.workType,
+          priority: params.priority || &quot;normal&quot;,
+          status: &quot;open&quot;,
+          assetId: params.assetId,
+          assetType: params.assetType,
+          assetName: params.assetName,
+          assignedTo: params.assignedTo,
+          assignedTeam: params.assignedTeam,
+          estimatedHours: params.estimatedHours,
+          dueDate: params.dueDate,
+          notes: params.notes,
+        })
+        .returning();
+
+      console.log(`[ActionHandler] Created work order: ${workOrder.workOrderNumber} - ${workOrder.title} (ID: ${workOrder.id})`);
+      return { success: true, data: workOrder };
+    } catch (error) {
+      console.error(&quot;[ActionHandler] Failed to create work order:&quot;, error);
+      return { success: false, error: String(error) };
+    }
+  }
+
+  async updateAssetStatus(
+    agentId: string,
+    params: {
+      assetId: string;
+      assetType: string;
+      assetName?: string;
+      previousStatus?: string;
+      newStatus: string;
+      reason?: string;
+      needsInspection?: boolean;
+      inspectionPriority?: string;
+      metadata?: Record&lt;string, unknown&gt;;
+    }
+  ): Promise&lt;ActionResult&lt;AssetStatusUpdate&gt;&gt; {
+    try {
+      const [statusUpdate] = await db
+        .insert(assetStatusUpdates)
+        .values({
+          agentId,
+          assetId: params.assetId,
+          assetType: params.assetType,
+          assetName: params.assetName,
+          previousStatus: params.previousStatus,
+          newStatus: params.newStatus,
+          reason: params.reason,
+          needsInspection: params.needsInspection || false,
+          inspectionPriority: params.inspectionPriority,
+          metadata: params.metadata ? JSON.stringify(params.metadata) : undefined,
+        })
+        .returning();
+
+      console.log(`[ActionHandler] Updated asset status: ${params.assetId} -&gt; ${params.newStatus} (ID: ${statusUpdate.id})`);
+      return { success: true, data: statusUpdate };
+    } catch (error) {
+      console.error(&quot;[ActionHandler] Failed to update asset status:&quot;, error);
+      return { success: false, error: String(error) };
+    }
+  }
+
+  async logEvent(
+    agentId: string,
+    params: {
+      eventType: string;
+      category: string;
+      title: string;
+      description?: string;
+      severity?: string;
+      relatedAssetId?: string;
+      relatedAssetType?: string;
+      metadata?: Record&lt;string, unknown&gt;;
+    }
+  ): Promise&lt;ActionResult&lt;EventLogEntry&gt;&gt; {
+    try {
+      const [event] = await db
+        .insert(eventLog)
+        .values({
+          agentId,
+          eventType: params.eventType,
+          category: params.category,
+          title: params.title,
+          description: params.description,
+          severity: params.severity || &quot;info&quot;,
+          relatedAssetId: params.relatedAssetId,
+          relatedAssetType: params.relatedAssetType,
+          metadata: params.metadata ? JSON.stringify(params.metadata) : undefined,
+        })
+        .returning();
+
+      console.log(`[ActionHandler] Logged event: ${event.title} (ID: ${event.id})`);
+      return { success: true, data: event };
+    } catch (error) {
+      console.error(&quot;[ActionHandler] Failed to log event:&quot;, error);
+      return { success: false, error: String(error) };
+    }
+  }
+
+  async sendNotification(
+    agentId: string,
+    params: {
+      notificationType: string;
+      recipient: string;
+      subject?: string;
+      message: string;
+      priority?: string;
+      relatedEventId?: number;
+      metadata?: Record&lt;string, unknown&gt;;
+    }
+  ): Promise&lt;ActionResult&lt;Notification&gt;&gt; {
+    try {
+      const [notification] = await db
+        .insert(notifications)
+        .values({
+          agentId,
+          notificationType: params.notificationType,
+          recipient: params.recipient,
+          subject: params.subject,
+          message: params.message,
+          priority: params.priority || &quot;normal&quot;,
+          status: &quot;sent&quot;,
+          relatedEventId: params.relatedEventId,
+          metadata: params.metadata ? JSON.stringify(params.metadata) : undefined,
+        })
+        .returning();
+
+      console.log(`[ActionHandler] Sent notification to ${notification.recipient}: ${notification.subject || notification.message.substring(0, 50)}`);
+      return { success: true, data: notification };
+    } catch (error) {
+      console.error(&quot;[ActionHandler] Failed to send notification:&quot;, error);
+      return { success: false, error: String(error) };
+    }
+  }
+
+  async getRecentAlerts(limit: number = 50) {
+    const results = await db.select().from(agentAlerts).orderBy(desc(agentAlerts.createdAt)).limit(limit);
+    return results.map(parseAlertMetadata);
+  }
+
+  async getScheduledMaintenance(limit: number = 50): Promise&lt;ScheduledMaintenance[]&gt; {
+    return db.select().from(scheduledMaintenance).orderBy(desc(scheduledMaintenance.createdAt)).limit(limit);
+  }
+
+  async getWorkOrders(limit: number = 50): Promise&lt;WorkOrder[]&gt; {
+    return db.select().from(workOrders).orderBy(desc(workOrders.createdAt)).limit(limit);
+  }
+
+  async getAssetStatusUpdates(limit: number = 50) {
+    const results = await db.select().from(assetStatusUpdates).orderBy(desc(assetStatusUpdates.createdAt)).limit(limit);
+    return results.map(parseAssetMetadata);
+  }
+
+  async getEventLog(limit: number = 100) {
+    const results = await db.select().from(eventLog).orderBy(desc(eventLog.createdAt)).limit(limit);
+    return results.map(parseEventMetadata);
+  }
+
+  async getNotifications(limit: number = 50) {
+    const results = await db.select().from(notifications).orderBy(desc(notifications.createdAt)).limit(limit);
+    return results.map(parseNotificationMetadata);
+  }
+
+  async acknowledgeAlert(alertId: number, acknowledgedBy: string): Promise&lt;ActionResult&lt;AgentAlert&gt;&gt; {
+    try {
+      const [alert] = await db
+        .update(agentAlerts)
+        .set({
+          status: &quot;acknowledged&quot;,
+          acknowledgedBy,
+          acknowledgedAt: new Date(),
+        })
+        .where(eq(agentAlerts.id, alertId))
+        .returning();
+
+      return { success: true, data: alert };
+    } catch (error) {
+      return { success: false, error: String(error) };
+    }
+  }
+
+  async resolveAlert(alertId: number, resolvedBy: string): Promise&lt;ActionResult&lt;AgentAlert&gt;&gt; {
+    try {
+      const [alert] = await db
+        .update(agentAlerts)
+        .set({
+          status: &quot;resolved&quot;,
+          resolvedBy,
+          resolvedAt: new Date(),
+        })
+        .where(eq(agentAlerts.id, alertId))
+        .returning();
+
+      return { success: true, data: alert };
+    } catch (error) {
+      return { success: false, error: String(error) };
+    }
+  }
+
+  async updateWorkOrderStatus(
+    workOrderId: number,
+    status: string,
+    actualHours?: number
+  ): Promise&lt;ActionResult&lt;WorkOrder&gt;&gt; {
+    try {
+      const updates: Partial&lt;WorkOrder&gt; = {
+        status,
+        updatedAt: new Date(),
+      };
+      if (actualHours !== undefined) {
+        updates.actualHours = actualHours;
+      }
+      if (status === &quot;completed&quot;) {
+        updates.completedAt = new Date();
+      }
+
+      const [workOrder] = await db
+        .update(workOrders)
+        .set(updates)
+        .where(eq(workOrders.id, workOrderId))
+        .returning();
+
+      return { success: true, data: workOrder };
+    } catch (error) {
+      return { success: false, error: String(error) };
+    }
+  }
+
+  async updateMaintenanceStatus(
+    maintenanceId: number,
+    status: string
+  ): Promise&lt;ActionResult&lt;ScheduledMaintenance&gt;&gt; {
+    try {
+      const [maintenance] = await db
+        .update(scheduledMaintenance)
+        .set({
+          status,
+          updatedAt: new Date(),
+        })
+        .where(eq(scheduledMaintenance.id, maintenanceId))
+        .returning();
+
+      return { success: true, data: maintenance };
+    } catch (error) {
+      return { success: false, error: String(error) };
+    }
+  }
+}
+
+export const actionHandler = new ActionHandler();
+</code></pre>
+  </div>
+</div>
+<div class="section">
+  <h1>4. Claim 2: Multi-Agent Orchestration Architecture</h1>
+
+  <div class="file-section">
+    <div class="file-header">📄 base-agent.ts</div>
+    <pre><code>import OpenAI from &quot;openai&quot;;
+import { db } from &quot;../db&quot;;
+import { auditLogs, agentMetrics } from &quot;@shared/schema&quot;;
+import { eq } from &quot;drizzle-orm&quot;;
+import type { AgentConfig, AgentContext, AgentResult, GovernanceDecision, ActionType } from &quot;./types&quot;;
+import { averecionClient } from &quot;./averecion-client&quot;;
+import { agentCache, CACHE_TTL } from &quot;./cache&quot;;
+import { getDeterministicFallback, shouldUseFallback, enhanceFallbackWithContext } from &quot;./fallbacks&quot;;
+import { autonomyTracker } from &quot;./autonomy-tracker&quot;;
+
+// Initialize OpenAI client using Replit AI Integrations
+const openai = new OpenAI({
+  baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
+  apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY,
+});
+
+export abstract class BaseAgent {
+  protected config: AgentConfig;
+  protected openai: OpenAI;
+
+  constructor(config: AgentConfig) {
+    this.config = config;
+    this.openai = openai;
+  }
+
+  // Main execution method with governance check
+  async execute(context: AgentContext, action: ActionType, payload: unknown): Promise&lt;AgentResult&gt; {
+    const correlationId = crypto.randomUUID();
+    const startTime = Date.now();
+
+    try {
+      // Check cache first for identical requests
+      const cachedResult = agentCache.get&lt;AgentResult&gt;(context.agentId, action, payload);
+      if (cachedResult) {
+        console.log(`[${this.config.id}] Cache hit for ${action}`);
+        return {
+          ...cachedResult,
+          latencyMs: Date.now() - startTime,
+        };
+      }
+
+      // For high-risk actions, request options from Averecion before governance check
+      let selectedOption: string | undefined;
+      if (averecionClient.isHighRiskAction(action)) {
+        const optionsResult = await this.handleHighRiskAction(context, action, payload);
+        if (optionsResult.blocked) {
+          return {
+            success: false,
+            action,
+            error: optionsResult.reason || &quot;High-risk action requires option selection&quot;,
+            confidenceScore: 0,
+            latencyMs: Date.now() - startTime,
+            governanceStatus: &quot;pending_review&quot;,
+          };
+        }
+        selectedOption = optionsResult.selectedOption;
+      }
+
+      // Pre-execution governance check via Averecion
+      const governanceDecision = await this.checkGovernance(context, action, payload);
+
+      // Honor Averecion&#039;s action modification if provided
+      const effectiveAction = governanceDecision.modifiedAction || action;
+
+      if (!governanceDecision.approved) {
+        // Add to approval queue for human review
+        if (governanceDecision.requiresHumanReview) {
+          await this.requestHumanApproval(correlationId, context, effectiveAction, payload);
+        }
+
+        // Create rejection result
+        const rejectionResult: AgentResult = {
+          success: false,
+          action: effectiveAction,
+          error: governanceDecision.reason || &quot;Action not approved by governance&quot;,
+          confidenceScore: 0,
+          latencyMs: Date.now() - startTime,
+        };
+
+        // Always log rejected actions for audit trail (critical for governance)
+        await this.logAction(correlationId, context, effectiveAction, payload, rejectionResult, &quot;governance_rejected&quot;);
+
+        return rejectionResult;
+      }
+
+      // Report decision telemetry to Averecion&#039;s Decision Inspector
+      const alternatives = this.getAlternativeActions(effectiveAction);
+      await averecionClient.reportDecision(
+        context.agentId,
+        effectiveAction,
+        {
+          task: this.getTaskDescription(effectiveAction),
+          inputs: { query: context.userQuery, payload },
+        },
+        this.getDecisionRationale(effectiveAction, context),
+        {
+          confidence: 0.85,
+          riskLevel: this.getRiskLevel(effectiveAction),
+          alternatives,
+        }
+      );
+
+      // Execute the action (using effective action which may be modified by Averecion)
+      let result: AgentResult;
+      try {
+        result = await this.executeAction(context, effectiveAction, payload);
+      } catch (error) {
+        // Check if we should use a deterministic fallback
+        if (shouldUseFallback(error)) {
+          console.log(`[${this.config.id}] Using fallback for ${effectiveAction} due to:`, error);
+          result = enhanceFallbackWithContext(
+            getDeterministicFallback(effectiveAction),
+            { userQuery: context.userQuery, agentId: context.agentId }
+          );
+        } else {
+          throw error;
+        }
+      }
+
+      // Apply any constraints from governance decision
+      if (governanceDecision.constraints) {
+        result.data = this.applyConstraints(result.data, governanceDecision.constraints);
+      }
+
+      // Cache successful results
+      if (result.success) {
+        const ttl = CACHE_TTL[effectiveAction] || CACHE_TTL.query_response;
+        agentCache.set(context.agentId, effectiveAction, payload, result, ttl);
+      }
+
+      // Log the action for audit
+      await this.logAction(correlationId, context, effectiveAction, payload, result, &quot;executed&quot;);
+
+      // Update agent metrics and track autonomy
+      await this.updateMetrics(context.agentId, result.success);
+      await autonomyTracker.recordOutcome(context.agentId, result.success);
+      
+      // Report outcome to Averecion
+      await averecionClient.reportOutcome(
+        context.agentId, 
+        effectiveAction, 
+        result.success, 
+        result.confidenceScore || 1.0
+      );
+
+      return {
+        ...result,
+        action: effectiveAction,
+        latencyMs: Date.now() - startTime,
+      };
+    } catch (error) {
+      // Try fallback for unhandled errors as last resort
+      if (shouldUseFallback(error)) {
+        const fallbackResult = enhanceFallbackWithContext(
+          getDeterministicFallback(action),
+          { userQuery: context.userQuery, agentId: context.agentId }
+        );
+        await this.logAction(correlationId, context, action, payload, fallbackResult, &quot;executed&quot;);
+        return {
+          ...fallbackResult,
+          latencyMs: Date.now() - startTime,
+        };
+      }
+
+      const errorResult: AgentResult = {
+        success: false,
+        action,
+        error: error instanceof Error ? error.message : &quot;Unknown error&quot;,
+        confidenceScore: 0,
+        latencyMs: Date.now() - startTime,
+      };
+
+      await this.logAction(correlationId, context, action, payload, errorResult, &quot;error&quot;);
+      await autonomyTracker.recordOutcome(context.agentId, false);
+      return errorResult;
+    }
+  }
+
+  // Apply constraints from governance decision to result data
+  private applyConstraints(data: unknown, constraints: Record&lt;string, unknown&gt;): unknown {
+    // For now, just attach constraints as metadata
+    // Can be extended to filter/modify data based on constraint rules
+    if (typeof data === &quot;object&quot; &amp;&amp; data !== null) {
+      return { ...data, _appliedConstraints: constraints };
+    }
+    return data;
+  }
+
+  // Check governance before execution
+  private async checkGovernance(
+    context: AgentContext,
+    action: ActionType,
+    payload: unknown
+  ): Promise&lt;GovernanceDecision&gt; {
+    // For supervised agents, always require approval for high-risk actions
+    if (context.trustLevel === &quot;supervised&quot;) {
+      const highRiskActions: ActionType[] = [&quot;datacenter_impact&quot;, &quot;check_capacity&quot;];
+      
+      if (highRiskActions.includes(action)) {
+        return {
+          approved: false,
+          requiresHumanReview: true,
+          reason: &quot;Action requires human approval for supervised agents&quot;,
+        };
+      }
+    }
+
+    // Check with Averecion for governance decision
+    try {
+      return await averecionClient.checkAction(context, action, payload);
+    } catch (error) {
+      // If Averecion is unavailable, fail safe
+      console.error(&quot;Averecion governance check failed:&quot;, error);
+      return {
+        approved: false,
+        requiresHumanReview: true,
+        reason: &quot;Governance service unavailable - requires human approval&quot;,
+      };
+    }
+  }
+
+  // Abstract method for action execution - implemented by specialized agents
+  protected abstract executeAction(
+    context: AgentContext,
+    action: ActionType,
+    payload: unknown
+  ): Promise&lt;AgentResult&gt;;
+
+  // Request human approval
+  private async requestHumanApproval(
+    correlationId: string,
+    context: AgentContext,
+    action: ActionType,
+    payload: unknown
+  ): Promise&lt;void&gt; {
+    const { approvalQueue } = await import(&quot;@shared/schema&quot;);
+    await db.insert(approvalQueue).values({
+      correlationId,
+      agentId: context.agentId,
+      action,
+      context: JSON.stringify({ ...context, payload }),
+      status: &quot;pending&quot;,
+    });
+  }
+
+  // Log action for audit trail (always called, even for rejections)
+  private async logAction(
+    correlationId: string,
+    context: AgentContext,
+    action: ActionType,
+    input: unknown,
+    result: AgentResult,
+    decisionType: &quot;executed&quot; | &quot;governance_rejected&quot; | &quot;error&quot; = &quot;executed&quot;
+  ): Promise&lt;void&gt; {
+    await db.insert(auditLogs).values({
+      correlationId,
+      agentId: context.agentId,
+      action,
+      input: JSON.stringify(input),
+      output: result.success ? JSON.stringify(result.data) : JSON.stringify({ error: result.error }),
+      decision: decisionType,
+      confidenceScore: result.confidenceScore,
+      latencyMs: result.latencyMs,
+      tokenUsage: result.tokenUsage,
+    });
+  }
+
+  // Update agent metrics for trust calculation
+  private async updateMetrics(agentId: string, success: boolean): Promise&lt;void&gt; {
+    const [existing] = await db
+      .select()
+      .from(agentMetrics)
+      .where(eq(agentMetrics.agentId, agentId));
+
+    if (existing) {
+      await db
+        .update(agentMetrics)
+        .set({
+          totalDecisions: existing.totalDecisions + 1,
+          successfulDecisions: success
+            ? existing.successfulDecisions + 1
+            : existing.successfulDecisions,
+          trustScore: this.calculateTrustScore(
+            existing.successfulDecisions + (success ? 1 : 0),
+            existing.totalDecisions + 1
+          ),
+          lastActiveAt: new Date(),
+        })
+        .where(eq(agentMetrics.agentId, agentId));
+    } else {
+      await db.insert(agentMetrics).values({
+        agentId,
+        agentType: this.config.type,
+        trustLevel: this.config.defaultTrustLevel,
+        trustScore: success ? 1 : 0,
+        totalDecisions: 1,
+        successfulDecisions: success ? 1 : 0,
+        lastActiveAt: new Date(),
+      });
+    }
+  }
+
+  // Calculate trust score based on success rate
+  private calculateTrustScore(successes: number, total: number): number {
+    if (total === 0) return 0;
+    // Weighted average with recency bias
+    return Math.min(1, (successes / total) * Math.min(1, total / 10));
+  }
+
+  // Helper to call OpenAI
+  protected async callLLM(
+    systemPrompt: string,
+    userMessage: string,
+    maxTokens?: number
+  ): Promise&lt;{ content: string; tokenUsage: number }&gt; {
+    const response = await this.openai.chat.completions.create({
+      model: &quot;gpt-4o-mini&quot;,
+      messages: [
+        { role: &quot;system&quot;, content: systemPrompt },
+        { role: &quot;user&quot;, content: userMessage },
+      ],
+      max_tokens: maxTokens || this.config.maxTokens,
+      temperature: 0.7,
+    });
+
+    return {
+      content: response.choices[0]?.message?.content || &quot;&quot;,
+      tokenUsage: response.usage?.total_tokens || 0,
+    };
+  }
+
+  // Get task description for decision telemetry
+  private getTaskDescription(action: ActionType): string {
+    const taskDescriptions: Record&lt;string, string&gt; = {
+      query_response: &quot;Respond to user query&quot;,
+      datacenter_impact: &quot;Analyze data center grid impact&quot;,
+      analyze_storm_resilience: &quot;Assess storm vulnerability and resilience&quot;,
+      forecast_load: &quot;Generate load demand forecast&quot;,
+      trace_network: &quot;Trace network connectivity&quot;,
+      check_capacity: &quot;Check capacity for new connections&quot;,
+    };
+    return taskDescriptions[action] || `Execute ${action}`;
+  }
+
+  // Get decision rationale based on action and context
+  private getDecisionRationale(action: ActionType, context: AgentContext): string {
+    const rationales: Record&lt;string, string&gt; = {
+      query_response: &quot;User query matches general information request pattern&quot;,
+      datacenter_impact: &quot;Query indicates data center infrastructure analysis needed&quot;,
+      analyze_storm_resilience: &quot;Weather-related keywords detected requiring resilience assessment&quot;,
+      forecast_load: &quot;Demand projection or load analysis requested&quot;,
+      trace_network: &quot;Network topology or connectivity analysis required&quot;,
+      check_capacity: &quot;Capacity feasibility check for new connection requested&quot;,
+    };
+    return rationales[action] || `Action ${action} selected based on query analysis`;
+  }
+
+  // Get risk level for action
+  private getRiskLevel(action: ActionType): &quot;low&quot; | &quot;medium&quot; | &quot;high&quot; | &quot;critical&quot; {
+    const riskLevels: Record&lt;string, &quot;low&quot; | &quot;medium&quot; | &quot;high&quot; | &quot;critical&quot;&gt; = {
+      query_response: &quot;low&quot;,
+      forecast_load: &quot;medium&quot;,
+      trace_network: &quot;medium&quot;,
+      analyze_storm_resilience: &quot;medium&quot;,
+      datacenter_impact: &quot;high&quot;,
+      check_capacity: &quot;high&quot;,
+    };
+    return riskLevels[action] || &quot;medium&quot;;
+  }
+
+  // Handle high-risk actions by requesting options from Averecion
+  private async handleHighRiskAction(
+    context: AgentContext,
+    action: ActionType,
+    payload: unknown
+  ): Promise&lt;{
+    blocked: boolean;
+    selectedOption?: string;
+    reason?: string;
+  }&gt; {
+    const payloadData = payload as Record&lt;string, unknown&gt; || {};
+    
+    // Determine context details for options generation
+    const actionContexts: Record&lt;string, { goal: string; context: string; isIrreversible: boolean }&gt; = {
+      schedule_grid_downtime: {
+        goal: &quot;Schedule planned grid maintenance&quot;,
+        context: `Affected area: ${payloadData.area || &quot;unknown&quot;}`,
+        isIrreversible: false,
+      },
+      emergency_load_shed: {
+        goal: &quot;Emergency load reduction to prevent grid failure&quot;,
+        context: `Load to shed: ${payloadData.load || &quot;unknown&quot;} MW`,
+        isIrreversible: true,
+      },
+      disconnect_service: {
+        goal: &quot;Disconnect customer service&quot;,
+        context: `Customer: ${payloadData.customerId || &quot;unknown&quot;}`,
+        isIrreversible: false,
+      },
+      approve_large_expenditure: {
+        goal: &quot;Approve capital expenditure&quot;,
+        context: `Amount: $${payloadData.amount || &quot;unknown&quot;}`,
+        isIrreversible: true,
+      },
+      modify_rate_structure: {
+        goal: &quot;Modify rate structure&quot;,
+        context: `Rate class: ${payloadData.rateClass || &quot;unknown&quot;}`,
+        isIrreversible: true,
+      },
+      datacenter_impact: {
+        goal: &quot;Analyze data center grid impact&quot;,
+        context: `Capacity: ${payloadData.capacity || context.userQuery}`,
+        isIrreversible: false,
+      },
+      check_capacity: {
+        goal: &quot;Check capacity for new connection&quot;,
+        context: `Request: ${context.userQuery}`,
+        isIrreversible: false,
+      },
+    };
+
+    const actionContext = actionContexts[action] || {
+      goal: `Execute ${action}`,
+      context: context.userQuery,
+      isIrreversible: false,
+    };
+
+    // Request options from Averecion
+    const optionsResult = await averecionClient.requestActionOptions(
+      context.agentId,
+      action,
+      {
+        goal: actionContext.goal,
+        context: actionContext.context,
+        riskLevel: this.getRiskLevel(action),
+        isIrreversible: actionContext.isIrreversible,
+        affectedEntities: payloadData.affectedCustomers as number || undefined,
+      }
+    );
+
+    if (!optionsResult.success) {
+      // If options generation fails, fall back to normal governance
+      console.log(`[${this.config.id}] Options generation failed, proceeding with governance check`);
+      return { blocked: false };
+    }
+
+    // If we have options and trust level is supervised, require human selection
+    if (optionsResult.options &amp;&amp; optionsResult.options.length &gt; 0) {
+      if (context.trustLevel === &quot;supervised&quot;) {
+        // Wait for human to select in dashboard (with timeout)
+        console.log(`[${this.config.id}] Waiting for human selection from ${optionsResult.options.length} options`);
+        
+        if (optionsResult.optionsId) {
+          const selectionResult = await averecionClient.waitForOptionSelection(
+            optionsResult.optionsId,
+            60000 // 1 minute timeout for now
+          );
+
+          if (selectionResult.success &amp;&amp; selectionResult.selectedOptionId) {
+            return { blocked: false, selectedOption: selectionResult.selectedOptionId };
+          } else if (selectionResult.timedOut) {
+            return { blocked: true, reason: &quot;Waiting for human option selection (check Averecion dashboard)&quot; };
+          }
+        }
+        
+        return { blocked: true, reason: &quot;Options generated - awaiting selection in Averecion dashboard&quot; };
+      } else {
+        // For guided/semi-autonomous, auto-select recommended option
+        const recommended = optionsResult.options.find(o =&gt; o.recommended);
+        if (recommended &amp;&amp; optionsResult.optionsId) {
+          await averecionClient.selectOption(
+            context.agentId,
+            optionsResult.optionsId,
+            recommended.id,
+            `Auto-selected recommended option for ${context.trustLevel} agent`
+          );
+          return { blocked: false, selectedOption: recommended.id };
+        }
+      }
+    }
+
+    return { blocked: false };
+  }
+
+  // Get alternative actions that were considered
+  private getAlternativeActions(chosenAction: ActionType): Array&lt;{
+    action: string;
+    confidence: number;
+    reason_not_chosen: string;
+  }&gt; {
+    const actionAlternatives: Record&lt;string, Array&lt;{ action: string; confidence: number; reason_not_chosen: string }&gt;&gt; = {
+      analyze_storm_resilience: [
+        { action: &quot;query_response&quot;, confidence: 0.3, reason_not_chosen: &quot;User query specifically mentions storm/weather analysis&quot; },
+        { action: &quot;trace_network&quot;, confidence: 0.2, reason_not_chosen: &quot;Storm assessment is more appropriate than topology analysis&quot; },
+      ],
+      forecast_load: [
+        { action: &quot;query_response&quot;, confidence: 0.25, reason_not_chosen: &quot;User explicitly requested forecast data&quot; },
+        { action: &quot;check_capacity&quot;, confidence: 0.4, reason_not_chosen: &quot;Load forecast is requested, not capacity check&quot; },
+      ],
+      trace_network: [
+        { action: &quot;query_response&quot;, confidence: 0.2, reason_not_chosen: &quot;Network trace specifically requested&quot; },
+      ],
+      check_capacity: [
+        { action: &quot;forecast_load&quot;, confidence: 0.5, reason_not_chosen: &quot;User asking about new connection, not existing load&quot; },
+        { action: &quot;query_response&quot;, confidence: 0.15, reason_not_chosen: &quot;Capacity analysis requires specialized processing&quot; },
+      ],
+      datacenter_impact: [
+        { action: &quot;check_capacity&quot;, confidence: 0.6, reason_not_chosen: &quot;Data center impact is broader than capacity check alone&quot; },
+        { action: &quot;forecast_load&quot;, confidence: 0.4, reason_not_chosen: &quot;Impact analysis includes more than load projection&quot; },
+      ],
+    };
+    return actionAlternatives[chosenAction] || [];
+  }
+}
+</code></pre>
+  </div>
+
+  <div class="file-section">
+    <div class="file-header">📄 orchestrator.ts</div>
+    <pre><code>import { supervisorAgent } from &quot;./supervisor-agent&quot;;
+import { stormResilienceAgent } from &quot;./specialized/storm-agent&quot;;
+import { loadForecastAgent } from &quot;./specialized/load-forecast-agent&quot;;
+import { gridTopologyAgent } from &quot;./specialized/grid-topology-agent&quot;;
+import { capacityCheckAgent } from &quot;./specialized/capacity-agent&quot;;
+import { db } from &quot;../db&quot;;
+import { agentMetrics } from &quot;@shared/schema&quot;;
+import { eq } from &quot;drizzle-orm&quot;;
+import type { AgentContext, AgentResult, TrustLevel, AgentType } from &quot;./types&quot;;
+import { averecionClient } from &quot;./averecion-client&quot;;
+
+// Agent definitions for registration
+const AGENT_DEFINITIONS = [
+  {
+    agentId: &quot;supervisor&quot;,
+    agentType: &quot;supervisor&quot;,
+    name: &quot;Supervisor Agent&quot;,
+    description: &quot;Routes queries to specialized agents based on intent analysis&quot;,
+    capabilities: [&quot;query_routing&quot;, &quot;intent_classification&quot;, &quot;agent_coordination&quot;],
+    trustLevel: &quot;guided&quot;,
+  },
+  {
+    agentId: &quot;storm-agent&quot;,
+    agentType: &quot;storm_resilience&quot;,
+    name: &quot;Storm Resilience Agent&quot;,
+    description: &quot;Analyzes weather events, outage risks, and vegetation management&quot;,
+    capabilities: [&quot;storm_assessment&quot;, &quot;outage_prediction&quot;, &quot;vegetation_risk&quot;],
+    trustLevel: &quot;guided&quot;,
+  },
+  {
+    agentId: &quot;load-forecast-agent&quot;,
+    agentType: &quot;load_forecast&quot;,
+    name: &quot;Load Forecast Agent&quot;,
+    description: &quot;Generates demand projections and growth analysis&quot;,
+    capabilities: [&quot;load_forecasting&quot;, &quot;demand_projection&quot;, &quot;growth_analysis&quot;],
+    trustLevel: &quot;guided&quot;,
+  },
+  {
+    agentId: &quot;grid-topology-agent&quot;,
+    agentType: &quot;grid_topology&quot;,
+    name: &quot;Grid Topology Agent&quot;,
+    description: &quot;Performs network tracing and connectivity analysis&quot;,
+    capabilities: [&quot;network_trace&quot;, &quot;topology_analysis&quot;, &quot;connectivity_check&quot;],
+    trustLevel: &quot;guided&quot;,
+  },
+  {
+    agentId: &quot;capacity-agent&quot;,
+    agentType: &quot;capacity_check&quot;,
+    name: &quot;Capacity Agent&quot;,
+    description: &quot;Analyzes headroom and upgrade requirements for new connections&quot;,
+    capabilities: [&quot;capacity_analysis&quot;, &quot;headroom_check&quot;, &quot;upgrade_planning&quot;],
+    trustLevel: &quot;supervised&quot;,
+  },
+];
+
+class AgentOrchestrator {
+  // Main entry point for processing user queries
+  async processQuery(userQuery: string, conversationHistory: Array&lt;{ role: string; content: string }&gt; = []): Promise&lt;AgentResult&gt; {
+    const correlationId = crypto.randomUUID();
+    const startTime = Date.now();
+
+    try {
+      // Step 1: Use supervisor to route the query
+      const routingDecision = await supervisorAgent.routeQuery(userQuery);
+      
+      console.log(`[Orchestrator] Query routed to ${routingDecision.targetAgent} with action ${routingDecision.action}`);
+
+      // Step 2: Get the appropriate agent
+      const targetAgent = this.getAgent(routingDecision.targetAgent);
+
+      if (!targetAgent) {
+        // Handle with supervisor for general queries
+        const context = await this.buildContext(&quot;supervisor-main&quot;, &quot;supervisor&quot;, userQuery, conversationHistory);
+        return supervisorAgent.execute(context, &quot;query_response&quot;, { query: userQuery });
+      }
+
+      // Step 3: Build context for the target agent
+      const context = await this.buildContext(
+        targetAgent.id,
+        routingDecision.targetAgent,
+        userQuery,
+        conversationHistory
+      );
+
+      // Step 4: Execute the action
+      const result = await targetAgent.agent.execute(
+        context,
+        routingDecision.action,
+        routingDecision.context
+      );
+
+      return {
+        ...result,
+        latencyMs: Date.now() - startTime,
+      };
+    } catch (error) {
+      console.error(&quot;[Orchestrator] Error processing query:&quot;, error);
+      return {
+        success: false,
+        action: &quot;query_response&quot;,
+        error: error instanceof Error ? error.message : &quot;Unknown error&quot;,
+        confidenceScore: 0,
+        latencyMs: Date.now() - startTime,
+      };
+    }
+  }
+
+  // Get agent by type
+  private getAgent(agentType: AgentType): { id: string; agent: any } | null {
+    switch (agentType) {
+      case &quot;storm_resilience&quot;:
+        return { id: &quot;storm-resilience-agent&quot;, agent: stormResilienceAgent };
+      case &quot;load_forecast&quot;:
+        return { id: &quot;load-forecast-agent&quot;, agent: loadForecastAgent };
+      case &quot;grid_topology&quot;:
+        return { id: &quot;grid-topology-agent&quot;, agent: gridTopologyAgent };
+      case &quot;capacity_check&quot;:
+        return { id: &quot;capacity-check-agent&quot;, agent: capacityCheckAgent };
+      case &quot;supervisor&quot;:
+        return { id: &quot;supervisor-main&quot;, agent: supervisorAgent };
+      default:
+        return null;
+    }
+  }
+
+  // Build agent context with trust level from database
+  private async buildContext(
+    agentId: string,
+    agentType: AgentType,
+    userQuery: string,
+    conversationHistory: Array&lt;{ role: string; content: string }&gt;
+  ): Promise&lt;AgentContext&gt; {
+    // Get trust level from database
+    const [metrics] = await db
+      .select()
+      .from(agentMetrics)
+      .where(eq(agentMetrics.agentId, agentId));
+
+    const trustLevel: TrustLevel = (metrics?.trustLevel as TrustLevel) || &quot;supervised&quot;;
+    const trustScore = metrics?.trustScore || 0;
+
+    return {
+      agentId,
+      agentType,
+      trustLevel,
+      trustScore,
+      conversationHistory,
+      userQuery,
+    };
+  }
+
+  // Get agent status for monitoring
+  async getAgentStatus(): Promise&lt;Array&lt;{
+    agentId: string;
+    type: string;
+    trustLevel: string;
+    trustScore: number;
+    totalDecisions: number;
+    successRate: number;
+  }&gt;&gt; {
+    const metrics = await db.select().from(agentMetrics);
+
+    return metrics.map((m) =&gt; ({
+      agentId: m.agentId,
+      type: m.agentType,
+      trustLevel: m.trustLevel,
+      trustScore: m.trustScore,
+      totalDecisions: m.totalDecisions,
+      successRate: m.totalDecisions &gt; 0
+        ? (m.successfulDecisions / m.totalDecisions) * 100
+        : 0,
+    }));
+  }
+
+  // Register all agents with Averecion and start their heartbeats
+  async registerAllAgents(): Promise&lt;{
+    registered: number;
+    failed: number;
+    agents: Array&lt;{ agentId: string; success: boolean; error?: string }&gt;;
+  }&gt; {
+    console.log(&quot;[Orchestrator] Registering all agents with Averecion...&quot;);
+    
+    const results: Array&lt;{ agentId: string; success: boolean; error?: string }&gt; = [];
+    let registered = 0;
+    let failed = 0;
+
+    for (const agent of AGENT_DEFINITIONS) {
+      const result = await averecionClient.registerAgent(agent);
+      
+      if (result.success) {
+        registered++;
+        // Start heartbeat for this agent with Averecion ID
+        averecionClient.startAgentHeartbeat(agent.agentId, result.agentId);
+      } else {
+        failed++;
+      }
+
+      results.push({
+        agentId: agent.agentId,
+        success: result.success,
+        error: result.error,
+      });
+    }
+
+    console.log(`[Orchestrator] Registration complete: ${registered} registered, ${failed} failed`);
+    return { registered, failed, agents: results };
+  }
+
+  // Get agent definitions
+  getAgentDefinitions() {
+    return AGENT_DEFINITIONS;
+  }
+}
+
+export const agentOrchestrator = new AgentOrchestrator();
+</code></pre>
+  </div>
+</div>
+<div class="section">
+  <h1>5. Claim 3: Human-in-the-Loop Approval Workflows</h1>
+
+  <div class="file-section">
+    <div class="file-header">📄 approval-routes.ts</div>
+    <pre><code>/**
+ * PATENT CLAIM 3: Human-in-the-Loop Approval Workflows
+ * 
+ * This file contains the extracted API endpoints for managing
+ * human approval workflows in the multi-agent governance system.
+ * 
+ * Extracted from: server/routes.ts
+ * Copyright (c) 2025 Cece Anderson / AverNova LLC
+ */
+
+import { Express } from &quot;express&quot;;
+import { db } from &quot;../db&quot;;
+import { approvalQueue, agentMetrics } from &quot;@shared/schema&quot;;
+import { eq, desc } from &quot;drizzle-orm&quot;;
+import { autonomyTracker } from &quot;../agents/autonomy-tracker&quot;;
+
+export function registerApprovalRoutes(app: Express) {
+  // Get pending approvals for human-in-the-loop
+  app.get(&quot;/api/agent/approvals&quot;, async (req, res) =&gt; {
+    try {
+      const pending = await db
+        .select()
+        .from(approvalQueue)
+        .where(eq(approvalQueue.status, &quot;pending&quot;))
+        .orderBy(desc(approvalQueue.createdAt));
+      
+      res.json({ approvals: pending });
+    } catch (error) {
+      console.error(&quot;Approvals error:&quot;, error);
+      res.status(500).json({ error: &quot;Failed to get pending approvals&quot; });
+    }
+  });
+
+  // Approve or reject a pending action
+  app.post(&quot;/api/agent/approvals/:id&quot;, async (req, res) =&gt; {
+    try {
+      const { id } = req.params;
+      const { decision, reviewedBy, reviewNotes } = req.body;
+      
+      if (!decision || ![&quot;approved&quot;, &quot;rejected&quot;].includes(decision)) {
+        return res.status(400).json({ error: &quot;Decision must be &#039;approved&#039; or &#039;rejected&#039;&quot; });
+      }
+      
+      // Update approval status in queue
+      const [updated] = await db
+        .update(approvalQueue)
+        .set({
+          status: decision,
+          reviewedBy,
+          reviewNotes,
+          reviewedAt: new Date(),
+        })
+        .where(eq(approvalQueue.id, parseInt(id)))
+        .returning();
+      
+      if (!updated) {
+        return res.status(404).json({ error: &quot;Approval not found&quot; });
+      }
+      
+      // Record metrics for the agent after approval/rejection
+      const agentId = updated.agentId;
+      const success = decision === &quot;approved&quot;;
+      
+      try {
+        const [existing] = await db
+          .select()
+          .from(agentMetrics)
+          .where(eq(agentMetrics.agentId, agentId));
+        
+        if (existing) {
+          await db
+            .update(agentMetrics)
+            .set({
+              totalDecisions: existing.totalDecisions + 1,
+              successfulDecisions: success 
+                ? existing.successfulDecisions + 1 
+                : existing.successfulDecisions,
+              lastActiveAt: new Date(),
+            })
+            .where(eq(agentMetrics.agentId, agentId));
+        }
+        
+        // Record outcome for autonomy progression
+        await autonomyTracker.recordOutcome(agentId, success);
+      } catch (metricsError) {
+        console.error(&quot;[Approval] Failed to update metrics:&quot;, metricsError);
+      }
+      
+      res.json({ approval: updated });
+    } catch (error) {
+      console.error(&quot;Approval update error:&quot;, error);
+      res.status(500).json({ error: &quot;Failed to update approval&quot; });
+    }
+  });
+}
+
+/**
+ * APPROVAL WORKFLOW PROCESS:
+ * 
+ * 1. Agent requests action that exceeds trust level
+ * 2. BaseAgent.requestHumanApproval() adds to approvalQueue
+ * 3. Human reviews in Approvals UI (approvals.tsx)
+ * 4. Human approves/rejects with notes
+ * 5. Decision recorded, metrics updated
+ * 6. Successful approvals contribute to trust score progression
+ * 7. Agent may be promoted to higher autonomy level
+ */
+</code></pre>
+  </div>
+
+  <div class="file-section">
+    <div class="file-header">📄 approvals.tsx</div>
+    <pre><code>import { useQuery, useMutation } from &quot;@tanstack/react-query&quot;;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from &quot;@/components/ui/card&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { Label } from &quot;@/components/ui/label&quot;;
+import { Separator } from &quot;@/components/ui/separator&quot;;
+import { ScrollArea } from &quot;@/components/ui/scroll-area&quot;;
+import { 
+  ShieldCheck, 
+  Clock, 
+  User, 
+  CheckCircle2, 
+  XCircle, 
+  AlertTriangle,
+  Loader2,
+  RefreshCw
+} from &quot;lucide-react&quot;;
+import { useState } from &quot;react&quot;;
+import { apiRequest, queryClient } from &quot;@/lib/queryClient&quot;;
+import { useToast } from &quot;@/hooks/use-toast&quot;;
+import { formatDistanceToNow } from &quot;date-fns&quot;;
+
+interface ApprovalItem {
+  id: number;
+  correlationId: string;
+  agentId: string;
+  action: string;
+  context: string;
+  status: string;
+  reviewedBy: string | null;
+  reviewNotes: string | null;
+  createdAt: string;
+  reviewedAt: string | null;
+}
+
+interface AgentStatus {
+  agentId: string;
+  type: string;
+  trustLevel: string;
+  trustScore: number;
+  totalDecisions: number;
+  successRate: number;
+}
+
+function getActionBadgeVariant(action: string): &quot;default&quot; | &quot;secondary&quot; | &quot;destructive&quot; | &quot;outline&quot; {
+  const highRisk = [&quot;check_capacity&quot;, &quot;datacenter_impact&quot;];
+  const mediumRisk = [&quot;forecast_load&quot;, &quot;analyze_storm_resilience&quot;, &quot;trace_network&quot;];
+  
+  if (highRisk.includes(action)) return &quot;destructive&quot;;
+  if (mediumRisk.includes(action)) return &quot;secondary&quot;;
+  return &quot;outline&quot;;
+}
+
+function formatAction(action: string): string {
+  return action
+    .split(&quot;_&quot;)
+    .map(word =&gt; word.charAt(0).toUpperCase() + word.slice(1))
+    .join(&quot; &quot;);
+}
+
+function ApprovalCard({ approval, onApprove, onReject, isProcessing }: {
+  approval: ApprovalItem;
+  onApprove: (id: number, notes: string) =&gt; void;
+  onReject: (id: number, notes: string) =&gt; void;
+  isProcessing: boolean;
+}) {
+  const [notes, setNotes] = useState(&quot;&quot;);
+  const context = JSON.parse(approval.context);
+
+  return (
+    &lt;Card className=&quot;border-card-border&quot; data-testid={`card-approval-${approval.id}`}&gt;
+      &lt;CardHeader className=&quot;pb-3&quot;&gt;
+        &lt;div className=&quot;flex items-start justify-between gap-4&quot;&gt;
+          &lt;div className=&quot;space-y-1&quot;&gt;
+            &lt;CardTitle className=&quot;text-base flex items-center gap-2&quot;&gt;
+              &lt;AlertTriangle className=&quot;h-4 w-4 text-amber-500&quot; /&gt;
+              {formatAction(approval.action)}
+            &lt;/CardTitle&gt;
+            &lt;CardDescription className=&quot;flex items-center gap-2&quot;&gt;
+              &lt;Clock className=&quot;h-3 w-3&quot; /&gt;
+              {formatDistanceToNow(new Date(approval.createdAt), { addSuffix: true })}
+            &lt;/CardDescription&gt;
+          &lt;/div&gt;
+          &lt;Badge variant={getActionBadgeVariant(approval.action)}&gt;
+            {approval.action.includes(&quot;capacity&quot;) || approval.action.includes(&quot;datacenter&quot;) 
+              ? &quot;High Risk&quot; 
+              : &quot;Medium Risk&quot;}
+          &lt;/Badge&gt;
+        &lt;/div&gt;
+      &lt;/CardHeader&gt;
+      
+      &lt;CardContent className=&quot;space-y-4&quot;&gt;
+        &lt;div className=&quot;space-y-2&quot;&gt;
+          &lt;Label className=&quot;text-xs text-muted-foreground&quot;&gt;Agent&lt;/Label&gt;
+          &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+            &lt;User className=&quot;h-4 w-4 text-muted-foreground&quot; /&gt;
+            &lt;span className=&quot;text-sm font-medium&quot;&gt;{approval.agentId}&lt;/span&gt;
+            &lt;Badge variant=&quot;outline&quot; className=&quot;text-xs&quot;&gt;
+              {context.trustLevel}
+            &lt;/Badge&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div className=&quot;space-y-2&quot;&gt;
+          &lt;Label className=&quot;text-xs text-muted-foreground&quot;&gt;User Query&lt;/Label&gt;
+          &lt;div className=&quot;p-3 bg-muted/50 rounded-md text-sm&quot;&gt;
+            {context.userQuery}
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        {context.payload &amp;&amp; Object.keys(context.payload).length &gt; 0 &amp;&amp; (
+          &lt;div className=&quot;space-y-2&quot;&gt;
+            &lt;Label className=&quot;text-xs text-muted-foreground&quot;&gt;Parameters&lt;/Label&gt;
+            &lt;div className=&quot;p-3 bg-muted/50 rounded-md text-sm font-mono&quot;&gt;
+              {JSON.stringify(context.payload, null, 2)}
+            &lt;/div&gt;
+          &lt;/div&gt;
+        )}
+
+        &lt;Separator /&gt;
+
+        &lt;div className=&quot;space-y-2&quot;&gt;
+          &lt;Label htmlFor={`notes-${approval.id}`} className=&quot;text-xs text-muted-foreground&quot;&gt;
+            Review Notes (optional)
+          &lt;/Label&gt;
+          &lt;Textarea
+            id={`notes-${approval.id}`}
+            placeholder=&quot;Add any notes about your decision...&quot;
+            value={notes}
+            onChange={(e) =&gt; setNotes(e.target.value)}
+            className=&quot;resize-none text-sm&quot;
+            rows={2}
+            data-testid={`input-notes-${approval.id}`}
+          /&gt;
+        &lt;/div&gt;
+      &lt;/CardContent&gt;
+
+      &lt;CardFooter className=&quot;gap-3&quot;&gt;
+        &lt;Button
+          variant=&quot;outline&quot;
+          className=&quot;flex-1&quot;
+          onClick={() =&gt; onReject(approval.id, notes)}
+          disabled={isProcessing}
+          data-testid={`button-reject-${approval.id}`}
+        &gt;
+          {isProcessing ? (
+            &lt;Loader2 className=&quot;h-4 w-4 animate-spin&quot; /&gt;
+          ) : (
+            &lt;XCircle className=&quot;h-4 w-4 mr-2&quot; /&gt;
+          )}
+          Reject
+        &lt;/Button&gt;
+        &lt;Button
+          className=&quot;flex-1&quot;
+          onClick={() =&gt; onApprove(approval.id, notes)}
+          disabled={isProcessing}
+          data-testid={`button-approve-${approval.id}`}
+        &gt;
+          {isProcessing ? (
+            &lt;Loader2 className=&quot;h-4 w-4 animate-spin&quot; /&gt;
+          ) : (
+            &lt;CheckCircle2 className=&quot;h-4 w-4 mr-2&quot; /&gt;
+          )}
+          Approve
+        &lt;/Button&gt;
+      &lt;/CardFooter&gt;
+    &lt;/Card&gt;
+  );
+}
+
+export default function ApprovalsPage() {
+  const { toast } = useToast();
+  const [processingId, setProcessingId] = useState&lt;number | null&gt;(null);
+
+  const { data: approvalsData, isLoading: approvalsLoading, refetch } = useQuery&lt;{ approvals: ApprovalItem[] }&gt;({
+    queryKey: [&quot;/api/agent/approvals&quot;],
+  });
+
+  const { data: statusData } = useQuery&lt;{ agents: AgentStatus[] }&gt;({
+    queryKey: [&quot;/api/agent/status&quot;],
+  });
+
+  const processMutation = useMutation({
+    mutationFn: async ({ id, decision, notes }: { id: number; decision: string; notes: string }) =&gt; {
+      const response = await apiRequest(&quot;POST&quot;, `/api/agent/approvals/${id}`, {
+        decision,
+        reviewedBy: &quot;current-user&quot;,
+        reviewNotes: notes || null,
+      });
+      return response.json();
+    },
+    onSuccess: (_, variables) =&gt; {
+      toast({
+        title: variables.decision === &quot;approved&quot; ? &quot;Action Approved&quot; : &quot;Action Rejected&quot;,
+        description: `The agent action has been ${variables.decision}.`,
+      });
+      queryClient.invalidateQueries({ queryKey: [&quot;/api/agent/approvals&quot;] });
+      queryClient.invalidateQueries({ queryKey: [&quot;/api/agent/status&quot;] });
+      setProcessingId(null);
+    },
+    onError: () =&gt; {
+      toast({
+        title: &quot;Error&quot;,
+        description: &quot;Failed to process the approval. Please try again.&quot;,
+        variant: &quot;destructive&quot;,
+      });
+      setProcessingId(null);
+    },
+  });
+
+  const handleApprove = (id: number, notes: string) =&gt; {
+    setProcessingId(id);
+    processMutation.mutate({ id, decision: &quot;approved&quot;, notes });
+  };
+
+  const handleReject = (id: number, notes: string) =&gt; {
+    setProcessingId(id);
+    processMutation.mutate({ id, decision: &quot;rejected&quot;, notes });
+  };
+
+  const approvals = approvalsData?.approvals || [];
+  const agents = statusData?.agents || [];
+
+  return (
+    &lt;div className=&quot;p-6 space-y-6&quot; data-testid=&quot;page-approvals&quot;&gt;
+      &lt;div className=&quot;max-w-4xl mx-auto space-y-6&quot;&gt;
+        &lt;div className=&quot;flex items-start justify-between gap-4&quot;&gt;
+          &lt;div&gt;
+            &lt;h1 className=&quot;text-2xl font-semibold flex items-center gap-3&quot;&gt;
+              &lt;ShieldCheck className=&quot;h-6 w-6&quot; /&gt;
+              Agent Approvals
+            &lt;/h1&gt;
+            &lt;p className=&quot;text-muted-foreground mt-1&quot;&gt;
+              Review and approve pending agent actions requiring human oversight
+            &lt;/p&gt;
+          &lt;/div&gt;
+          &lt;Button 
+            variant=&quot;outline&quot; 
+            size=&quot;icon&quot;
+            onClick={() =&gt; refetch()}
+            data-testid=&quot;button-refresh-approvals&quot;
+          &gt;
+            &lt;RefreshCw className=&quot;h-4 w-4&quot; /&gt;
+          &lt;/Button&gt;
+        &lt;/div&gt;
+
+        {agents.length &gt; 0 &amp;&amp; (
+          &lt;Card className=&quot;border-card-border&quot;&gt;
+            &lt;CardHeader className=&quot;pb-3&quot;&gt;
+              &lt;CardTitle className=&quot;text-base&quot;&gt;Agent Status&lt;/CardTitle&gt;
+              &lt;CardDescription&gt;
+                Current trust levels and performance metrics
+              &lt;/CardDescription&gt;
+            &lt;/CardHeader&gt;
+            &lt;CardContent&gt;
+              &lt;div className=&quot;grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4&quot;&gt;
+                {agents.map((agent) =&gt; (
+                  &lt;div 
+                    key={agent.agentId} 
+                    className=&quot;p-3 rounded-md bg-muted/50 space-y-2&quot;
+                    data-testid={`status-agent-${agent.agentId}`}
+                  &gt;
+                    &lt;div className=&quot;flex items-center justify-between gap-2&quot;&gt;
+                      &lt;span className=&quot;text-sm font-medium truncate&quot;&gt;{agent.type}&lt;/span&gt;
+                      &lt;Badge variant=&quot;outline&quot; className=&quot;text-xs shrink-0&quot;&gt;
+                        {agent.trustLevel}
+                      &lt;/Badge&gt;
+                    &lt;/div&gt;
+                    &lt;div className=&quot;flex items-center justify-between gap-2 text-xs text-muted-foreground&quot;&gt;
+                      &lt;span&gt;{agent.totalDecisions} decisions&lt;/span&gt;
+                      &lt;span&gt;{agent.successRate.toFixed(0)}% success&lt;/span&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                ))}
+              &lt;/div&gt;
+            &lt;/CardContent&gt;
+          &lt;/Card&gt;
+        )}
+
+        &lt;div className=&quot;space-y-4&quot;&gt;
+          &lt;div className=&quot;flex items-center justify-between gap-4&quot;&gt;
+            &lt;h2 className=&quot;text-lg font-medium&quot;&gt;Pending Approvals&lt;/h2&gt;
+            &lt;Badge variant=&quot;secondary&quot; data-testid=&quot;badge-pending-count&quot;&gt;
+              {approvals.length} pending
+            &lt;/Badge&gt;
+          &lt;/div&gt;
+
+          {approvalsLoading ? (
+            &lt;div className=&quot;flex items-center justify-center py-12&quot;&gt;
+              &lt;Loader2 className=&quot;h-8 w-8 animate-spin text-muted-foreground&quot; /&gt;
+            &lt;/div&gt;
+          ) : approvals.length === 0 ? (
+            &lt;Card className=&quot;border-card-border&quot;&gt;
+              &lt;CardContent className=&quot;flex flex-col items-center justify-center py-12 text-center&quot;&gt;
+                &lt;CheckCircle2 className=&quot;h-12 w-12 text-green-500 mb-4&quot; /&gt;
+                &lt;h3 className=&quot;text-lg font-medium&quot;&gt;All caught up!&lt;/h3&gt;
+                &lt;p className=&quot;text-muted-foreground mt-1&quot;&gt;
+                  No pending approvals at this time
+                &lt;/p&gt;
+              &lt;/CardContent&gt;
+            &lt;/Card&gt;
+          ) : (
+            &lt;ScrollArea className=&quot;h-[600px]&quot;&gt;
+              &lt;div className=&quot;space-y-4 pr-4&quot;&gt;
+                {approvals.map((approval) =&gt; (
+                  &lt;ApprovalCard
+                    key={approval.id}
+                    approval={approval}
+                    onApprove={handleApprove}
+                    onReject={handleReject}
+                    isProcessing={processingId === approval.id}
+                  /&gt;
+                ))}
+              &lt;/div&gt;
+            &lt;/ScrollArea&gt;
+          )}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+  </div>
+</div>
+<div class="section">
+  <h1>6. Claim 4: Domain-Specific Agent Analysis System</h1>
+
+  <div class="file-section">
+    <div class="file-header">📄 capacity-agent.ts</div>
+    <pre><code>import { BaseAgent } from &quot;../base-agent&quot;;
+import { actionHandler } from &quot;../action-handler&quot;;
+import type { AgentConfig, AgentContext, AgentResult, ActionType } from &quot;../types&quot;;
+
+const CAPACITY_CHECK_PROMPT = `You are a capacity checking agent for utility grid planning.
+You evaluate the feasibility of new connections and capacity additions.
+
+When checking capacity:
+1. Assess current utilization
+2. Evaluate available headroom
+3. Identify upgrade requirements
+4. Calculate connection costs
+
+Provide feasibility analysis with clear recommendations.
+Include specific substation and feeder references when available.`;
+
+export class CapacityCheckAgent extends BaseAgent {
+  constructor() {
+    const config: AgentConfig = {
+      id: &quot;capacity-check-agent&quot;,
+      type: &quot;capacity_check&quot;,
+      systemPrompt: CAPACITY_CHECK_PROMPT,
+      allowedActions: [&quot;check_capacity&quot;],
+      defaultTrustLevel: &quot;supervised&quot;,
+      maxTokens: 2000,
+    };
+    super(config);
+  }
+
+  protected async executeAction(
+    context: AgentContext,
+    action: ActionType,
+    payload: unknown
+  ): Promise&lt;AgentResult&gt; {
+    if (action !== &quot;check_capacity&quot;) {
+      return {
+        success: false,
+        action,
+        error: &quot;Capacity agent can only check capacity&quot;,
+        confidenceScore: 0,
+      };
+    }
+
+    const capacityPayload = payload as { 
+      capacityMw?: number; 
+      latitude?: number;
+      longitude?: number;
+      substationId?: string;
+      customerId?: string;
+    };
+
+    const { content, tokenUsage } = await this.callLLM(
+      CAPACITY_CHECK_PROMPT,
+      `Check capacity for: ${JSON.stringify(capacityPayload)}\n\nUser context: ${context.userQuery}`
+    );
+
+    const actionsExecuted: string[] = [];
+    const capacityMw = capacityPayload.capacityMw || 10;
+
+    await actionHandler.logEvent(this.config.id, {
+      eventType: &quot;decision&quot;,
+      category: &quot;capacity&quot;,
+      title: `Capacity Check: ${capacityMw} MW Request`,
+      description: `Capacity feasibility check for ${capacityMw} MW at location (${capacityPayload.latitude}, ${capacityPayload.longitude})`,
+      severity: capacityMw &gt; 50 ? &quot;warning&quot; : &quot;info&quot;,
+      relatedAssetId: capacityPayload.substationId,
+      relatedAssetType: &quot;substation&quot;,
+      metadata: { 
+        payload: capacityPayload,
+        customerId: capacityPayload.customerId
+      }
+    });
+    actionsExecuted.push(&quot;logged_event&quot;);
+
+    if (capacityMw &gt; 25) {
+      await actionHandler.createAlert(this.config.id, {
+        alertType: &quot;info&quot;,
+        title: `Large Capacity Request: ${capacityMw} MW`,
+        message: `Capacity check requested for ${capacityMw} MW. Location: (${capacityPayload.latitude?.toFixed(4)}, ${capacityPayload.longitude?.toFixed(4)}). Assessment in progress.`,
+        severity: capacityMw &gt; 75 ? &quot;high&quot; : &quot;medium&quot;,
+        relatedAssetId: capacityPayload.substationId,
+        relatedAssetType: &quot;substation&quot;,
+        metadata: { 
+          capacityMw,
+          location: { lat: capacityPayload.latitude, lng: capacityPayload.longitude }
+        }
+      });
+      actionsExecuted.push(&quot;created_alert&quot;);
+    }
+
+    if (capacityMw &gt; 50) {
+      await actionHandler.updateAssetStatus(this.config.id, {
+        assetId: capacityPayload.substationId || `sub-${Math.random().toString(36).substring(7)}`,
+        assetType: &quot;substation&quot;,
+        assetName: `Serving Substation`,
+        previousStatus: &quot;operational&quot;,
+        newStatus: &quot;under_review&quot;,
+        reason: `Capacity check for ${capacityMw} MW connection request`,
+        needsInspection: true,
+        inspectionPriority: capacityMw &gt; 75 ? &quot;high&quot; : &quot;normal&quot;,
+        metadata: { capacityRequest: capacityMw }
+      });
+      actionsExecuted.push(&quot;updated_asset_status&quot;);
+
+      const dueDate = new Date();
+      dueDate.setDate(dueDate.getDate() + 7);
+
+      await actionHandler.createWorkOrder(this.config.id, {
+        title: `Capacity Inspection: ${capacityMw} MW Request`,
+        description: `Field inspection required to verify capacity availability for ${capacityMw} MW connection`,
+        workType: &quot;inspection&quot;,
+        priority: capacityMw &gt; 75 ? &quot;high&quot; : &quot;normal&quot;,
+        assetId: capacityPayload.substationId,
+        assetType: &quot;substation&quot;,
+        assignedTeam: &quot;Field Operations&quot;,
+        estimatedHours: 4,
+        dueDate,
+        notes: `Customer connection request. Location: (${capacityPayload.latitude}, ${capacityPayload.longitude})`
+      });
+      actionsExecuted.push(&quot;created_work_order&quot;);
+    }
+
+    await actionHandler.sendNotification(this.config.id, {
+      notificationType: &quot;in_app&quot;,
+      recipient: &quot;capacity-planning&quot;,
+      subject: `Capacity Check Complete: ${capacityMw} MW`,
+      message: `Capacity assessment completed for ${capacityMw} MW request. ${actionsExecuted.length} actions taken.`,
+      priority: capacityMw &gt; 50 ? &quot;high&quot; : &quot;normal&quot;
+    });
+    actionsExecuted.push(&quot;sent_notification&quot;);
+
+    return {
+      success: true,
+      action,
+      data: {
+        assessment: content,
+        requestedCapacity: capacityPayload.capacityMw,
+        location: {
+          latitude: capacityPayload.latitude,
+          longitude: capacityPayload.longitude,
+        },
+        timestamp: new Date().toISOString(),
+        actionsExecuted,
+      },
+      confidenceScore: 0.75,
+      tokenUsage,
+    };
+  }
+}
+
+export const capacityCheckAgent = new CapacityCheckAgent();
+</code></pre>
+  </div>
+
+  <div class="file-section">
+    <div class="file-header">📄 grid-topology-agent.ts</div>
+    <pre><code>import { BaseAgent } from &quot;../base-agent&quot;;
+import { actionHandler } from &quot;../action-handler&quot;;
+import type { AgentConfig, AgentContext, AgentResult, ActionType } from &quot;../types&quot;;
+
+const GRID_TOPOLOGY_PROMPT = `You are a grid topology agent for utility network analysis.
+You trace network connectivity and analyze upstream/downstream relationships.
+
+When tracing networks:
+1. Identify connected assets
+2. Map power flow paths
+3. Determine circuit dependencies
+4. Highlight critical interconnections
+
+Provide clear topological analysis with path information.
+Include specific asset IDs, feeder names, and connection details.`;
+
+export class GridTopologyAgent extends BaseAgent {
+  constructor() {
+    const config: AgentConfig = {
+      id: &quot;grid-topology-agent&quot;,
+      type: &quot;grid_topology&quot;,
+      systemPrompt: GRID_TOPOLOGY_PROMPT,
+      allowedActions: [&quot;trace_network&quot;],
+      defaultTrustLevel: &quot;guided&quot;,
+      maxTokens: 2000,
+    };
+    super(config);
+  }
+
+  protected async executeAction(
+    context: AgentContext,
+    action: ActionType,
+    payload: unknown
+  ): Promise&lt;AgentResult&gt; {
+    if (action !== &quot;trace_network&quot;) {
+      return {
+        success: false,
+        action,
+        error: &quot;Grid topology agent can only trace networks&quot;,
+        confidenceScore: 0,
+      };
+    }
+
+    const tracePayload = payload as { 
+      assetId?: string; 
+      direction?: string;
+      assetType?: string;
+      assetName?: string;
+    };
+
+    const { content, tokenUsage } = await this.callLLM(
+      GRID_TOPOLOGY_PROMPT,
+      `Trace network for: ${JSON.stringify(tracePayload)}\n\nUser context: ${context.userQuery}`
+    );
+
+    const actionsExecuted: string[] = [];
+    const direction = tracePayload.direction || &quot;downstream&quot;;
+
+    await actionHandler.logEvent(this.config.id, {
+      eventType: &quot;observation&quot;,
+      category: &quot;topology&quot;,
+      title: `Network Trace: ${tracePayload.assetId || &quot;Asset&quot;}`,
+      description: `${direction.charAt(0).toUpperCase() + direction.slice(1)} trace from ${tracePayload.assetId || &quot;starting point&quot;}`,
+      severity: &quot;info&quot;,
+      relatedAssetId: tracePayload.assetId,
+      relatedAssetType: tracePayload.assetType || &quot;asset&quot;,
+      metadata: { 
+        direction,
+        userQuery: context.userQuery
+      }
+    });
+    actionsExecuted.push(&quot;logged_event&quot;);
+
+    if (tracePayload.assetId) {
+      await actionHandler.updateAssetStatus(this.config.id, {
+        assetId: tracePayload.assetId,
+        assetType: tracePayload.assetType || &quot;asset&quot;,
+        assetName: tracePayload.assetName,
+        previousStatus: &quot;unknown&quot;,
+        newStatus: &quot;verified&quot;,
+        reason: `Connectivity verified via ${direction} network trace`,
+        needsInspection: false,
+        metadata: { 
+          traceDirection: direction,
+          tracedAt: new Date().toISOString()
+        }
+      });
+      actionsExecuted.push(&quot;updated_asset_status&quot;);
+    }
+
+    if (context.userQuery.toLowerCase().includes(&quot;issue&quot;) ||
+        context.userQuery.toLowerCase().includes(&quot;problem&quot;) ||
+        context.userQuery.toLowerCase().includes(&quot;fault&quot;)) {
+      await actionHandler.createAlert(this.config.id, {
+        alertType: &quot;warning&quot;,
+        title: `Network Issue Investigation: ${tracePayload.assetId || &quot;Asset&quot;}`,
+        message: `Network trace performed to investigate reported issue. ${direction} analysis completed.`,
+        severity: &quot;medium&quot;,
+        relatedAssetId: tracePayload.assetId,
+        relatedAssetType: tracePayload.assetType || &quot;asset&quot;,
+        metadata: { direction, trace: content.substring(0, 500) }
+      });
+      actionsExecuted.push(&quot;created_alert&quot;);
+
+      const dueDate = new Date();
+      dueDate.setDate(dueDate.getDate() + 3);
+
+      await actionHandler.createWorkOrder(this.config.id, {
+        title: `Network Issue Follow-up: ${tracePayload.assetId || &quot;Asset&quot;}`,
+        description: `Follow-up inspection for network issue identified during trace analysis`,
+        workType: &quot;inspection&quot;,
+        priority: &quot;normal&quot;,
+        assetId: tracePayload.assetId,
+        assetType: tracePayload.assetType || &quot;asset&quot;,
+        assetName: tracePayload.assetName,
+        assignedTeam: &quot;Network Operations&quot;,
+        estimatedHours: 2,
+        dueDate,
+        notes: `Triggered by network trace investigation. Direction: ${direction}`
+      });
+      actionsExecuted.push(&quot;created_work_order&quot;);
+
+      await actionHandler.sendNotification(this.config.id, {
+        notificationType: &quot;in_app&quot;,
+        recipient: &quot;network-ops&quot;,
+        subject: `Network Issue Alert: ${tracePayload.assetId}`,
+        message: `Network trace completed for issue investigation at ${tracePayload.assetId}. Work order created for follow-up.`,
+        priority: &quot;normal&quot;
+      });
+      actionsExecuted.push(&quot;sent_notification&quot;);
+    }
+
+    return {
+      success: true,
+      action,
+      data: {
+        trace: content,
+        assetId: tracePayload.assetId,
+        direction,
+        timestamp: new Date().toISOString(),
+        actionsExecuted,
+      },
+      confidenceScore: 0.85,
+      tokenUsage,
+    };
+  }
+}
+
+export const gridTopologyAgent = new GridTopologyAgent();
+</code></pre>
+  </div>
+
+  <div class="file-section">
+    <div class="file-header">📄 load-forecast-agent.ts</div>
+    <pre><code>import { BaseAgent } from &quot;../base-agent&quot;;
+import { actionHandler } from &quot;../action-handler&quot;;
+import type { AgentConfig, AgentContext, AgentResult, ActionType } from &quot;../types&quot;;
+
+const LOAD_FORECAST_PROMPT = `You are a load forecasting agent for utility grid planning.
+You project energy demand and generate forecasts for grid planning.
+
+When forecasting:
+1. Analyze historical load patterns
+2. Consider seasonal variations
+3. Account for growth trends
+4. Factor in economic indicators
+
+Provide forecasts with confidence intervals and scenario analysis.
+Include specific substation and asset references when available.`;
+
+export class LoadForecastAgent extends BaseAgent {
+  constructor() {
+    const config: AgentConfig = {
+      id: &quot;load-forecast-agent&quot;,
+      type: &quot;load_forecast&quot;,
+      systemPrompt: LOAD_FORECAST_PROMPT,
+      allowedActions: [&quot;forecast_load&quot;, &quot;datacenter_impact&quot;],
+      defaultTrustLevel: &quot;guided&quot;,
+      maxTokens: 2000,
+    };
+    super(config);
+  }
+
+  protected async executeAction(
+    context: AgentContext,
+    action: ActionType,
+    payload: unknown
+  ): Promise&lt;AgentResult&gt; {
+    if (action !== &quot;forecast_load&quot; &amp;&amp; action !== &quot;datacenter_impact&quot;) {
+      return {
+        success: false,
+        action,
+        error: &quot;Load forecast agent can only forecast load or analyze datacenter impact&quot;,
+        confidenceScore: 0,
+      };
+    }
+
+    const forecastPayload = payload as { 
+      nodeId?: string; 
+      horizon?: string;
+      capacityMw?: number;
+      region?: string;
+    };
+
+    const { content, tokenUsage } = await this.callLLM(
+      LOAD_FORECAST_PROMPT,
+      `${action === &quot;datacenter_impact&quot; ? &quot;Analyze data center impact&quot; : &quot;Generate load forecast&quot;} for: ${JSON.stringify(forecastPayload)}\n\nUser context: ${context.userQuery}`
+    );
+
+    const actionsExecuted: string[] = [];
+
+    await actionHandler.logEvent(this.config.id, {
+      eventType: action === &quot;datacenter_impact&quot; ? &quot;decision&quot; : &quot;observation&quot;,
+      category: &quot;load&quot;,
+      title: action === &quot;datacenter_impact&quot; 
+        ? `Data Center Impact: ${forecastPayload.region || forecastPayload.nodeId || &quot;Analysis&quot;}`
+        : `Load Forecast: ${forecastPayload.nodeId || &quot;Grid&quot;}`,
+      description: `${action === &quot;datacenter_impact&quot; ? &quot;Data center impact analysis&quot; : &quot;Load forecast&quot;} for ${forecastPayload.nodeId || &quot;grid&quot;}. Horizon: ${forecastPayload.horizon || &quot;10 years&quot;}`,
+      severity: &quot;info&quot;,
+      relatedAssetId: forecastPayload.nodeId,
+      relatedAssetType: &quot;substation&quot;,
+      metadata: { payload: forecastPayload }
+    });
+    actionsExecuted.push(&quot;logged_event&quot;);
+
+    if (action === &quot;datacenter_impact&quot;) {
+      const capacityMw = forecastPayload.capacityMw || 100;
+      
+      if (capacityMw &gt; 50) {
+        await actionHandler.createAlert(this.config.id, {
+          alertType: &quot;info&quot;,
+          title: `High Capacity Request: ${capacityMw} MW`,
+          message: `Data center capacity request of ${capacityMw} MW requires grid assessment. ${content.substring(0, 150)}...`,
+          severity: capacityMw &gt; 100 ? &quot;high&quot; : &quot;medium&quot;,
+          relatedAssetId: forecastPayload.nodeId,
+          relatedAssetType: &quot;substation&quot;,
+          metadata: { capacityMw, region: forecastPayload.region }
+        });
+        actionsExecuted.push(&quot;created_alert&quot;);
+      }
+
+      if (capacityMw &gt; 100) {
+        const dueDate = new Date();
+        dueDate.setDate(dueDate.getDate() + 14);
+
+        await actionHandler.createWorkOrder(this.config.id, {
+          title: `Capacity Upgrade Study: ${forecastPayload.region || forecastPayload.nodeId}`,
+          description: `Engineering study required for ${capacityMw} MW data center connection`,
+          workType: &quot;upgrade&quot;,
+          priority: &quot;high&quot;,
+          assetId: forecastPayload.nodeId,
+          assetType: &quot;substation&quot;,
+          assignedTeam: &quot;Engineering&quot;,
+          estimatedHours: 40,
+          dueDate,
+          notes: `Triggered by data center impact analysis. Requested capacity: ${capacityMw} MW`
+        });
+        actionsExecuted.push(&quot;created_work_order&quot;);
+      }
+    }
+
+    if (context.userQuery.toLowerCase().includes(&quot;critical&quot;) ||
+        context.userQuery.toLowerCase().includes(&quot;urgent&quot;)) {
+      await actionHandler.sendNotification(this.config.id, {
+        notificationType: &quot;in_app&quot;,
+        recipient: &quot;planning-team&quot;,
+        subject: `Load Forecast Alert`,
+        message: `Urgent load forecast analysis completed for ${forecastPayload.nodeId || &quot;grid&quot;}. Review required.`,
+        priority: &quot;high&quot;
+      });
+      actionsExecuted.push(&quot;sent_notification&quot;);
+    }
+
+    return {
+      success: true,
+      action,
+      data: {
+        forecast: content,
+        nodeId: forecastPayload.nodeId || &quot;default&quot;,
+        horizon: forecastPayload.horizon || &quot;P10Y&quot;,
+        timestamp: new Date().toISOString(),
+        actionsExecuted,
+      },
+      confidenceScore: 0.8,
+      tokenUsage,
+    };
+  }
+}
+
+export const loadForecastAgent = new LoadForecastAgent();
+</code></pre>
+  </div>
+
+  <div class="file-section">
+    <div class="file-header">📄 storm-agent.ts</div>
+    <pre><code>import { BaseAgent } from &quot;../base-agent&quot;;
+import { actionHandler } from &quot;../action-handler&quot;;
+import type { AgentConfig, AgentContext, AgentResult, ActionType } from &quot;../types&quot;;
+
+const STORM_SYSTEM_PROMPT = `You are a storm resilience analysis agent for utility grid planning. 
+You analyze weather event impacts, assess grid vulnerability, and provide recommendations.
+
+When analyzing storm resilience:
+1. Evaluate weather patterns and severity
+2. Identify vulnerable infrastructure
+3. Assess potential outage impacts
+4. Recommend mitigation strategies
+
+Provide structured analysis with risk levels (CRITICAL, HIGH, MEDIUM, LOW).
+Include specific asset IDs and names when available.`;
+
+export class StormResilienceAgent extends BaseAgent {
+  constructor() {
+    const config: AgentConfig = {
+      id: &quot;storm-resilience-agent&quot;,
+      type: &quot;storm_resilience&quot;,
+      systemPrompt: STORM_SYSTEM_PROMPT,
+      allowedActions: [&quot;analyze_storm_resilience&quot;],
+      defaultTrustLevel: &quot;guided&quot;,
+      maxTokens: 2000,
+    };
+    super(config);
+  }
+
+  protected async executeAction(
+    context: AgentContext,
+    action: ActionType,
+    payload: unknown
+  ): Promise&lt;AgentResult&gt; {
+    if (action !== &quot;analyze_storm_resilience&quot;) {
+      return {
+        success: false,
+        action,
+        error: &quot;Storm agent can only analyze storm resilience&quot;,
+        confidenceScore: 0,
+      };
+    }
+
+    const analysisPayload = payload as { region?: string; stormId?: string; severity?: string };
+    
+    const { content, tokenUsage } = await this.callLLM(
+      STORM_SYSTEM_PROMPT,
+      `Analyze storm resilience for: ${JSON.stringify(analysisPayload)}\n\nUser context: ${context.userQuery}`
+    );
+
+    const actionsExecuted: string[] = [];
+
+    await actionHandler.logEvent(this.config.id, {
+      eventType: &quot;analysis&quot;,
+      category: &quot;storm&quot;,
+      title: `Storm Analysis: ${analysisPayload.region || &quot;Region&quot;}`,
+      description: `Analyzed storm resilience for ${analysisPayload.region || &quot;default region&quot;}. ${analysisPayload.stormId ? `Storm ID: ${analysisPayload.stormId}` : &quot;&quot;}`,
+      severity: &quot;info&quot;,
+      metadata: { payload: analysisPayload, userQuery: context.userQuery }
+    });
+    actionsExecuted.push(&quot;logged_event&quot;);
+
+    const severity = analysisPayload.severity || &quot;medium&quot;;
+    if (severity === &quot;high&quot; || severity === &quot;critical&quot;) {
+      await actionHandler.createAlert(this.config.id, {
+        alertType: &quot;warning&quot;,
+        title: `Storm Alert: ${analysisPayload.region || &quot;Region&quot;}`,
+        message: `${severity.toUpperCase()} severity storm detected. Immediate action recommended. ${content.substring(0, 200)}...`,
+        severity: severity === &quot;critical&quot; ? &quot;critical&quot; : &quot;high&quot;,
+        relatedAssetType: &quot;region&quot;,
+        relatedAssetId: analysisPayload.region || &quot;default&quot;,
+        metadata: { stormId: analysisPayload.stormId }
+      });
+      actionsExecuted.push(&quot;created_alert&quot;);
+
+      await actionHandler.sendNotification(this.config.id, {
+        notificationType: &quot;in_app&quot;,
+        recipient: &quot;grid-operations&quot;,
+        subject: `Storm Alert: ${severity.toUpperCase()} severity`,
+        message: `Storm analysis indicates ${severity} severity conditions in ${analysisPayload.region || &quot;region&quot;}. Review recommended actions.`,
+        priority: severity === &quot;critical&quot; ? &quot;urgent&quot; : &quot;high&quot;
+      });
+      actionsExecuted.push(&quot;sent_notification&quot;);
+    }
+
+    if (context.userQuery.toLowerCase().includes(&quot;maintenance&quot;) || 
+        context.userQuery.toLowerCase().includes(&quot;prepare&quot;) ||
+        severity === &quot;critical&quot;) {
+      const startDate = new Date();
+      startDate.setHours(startDate.getHours() + 2);
+      const endDate = new Date(startDate);
+      endDate.setHours(endDate.getHours() + 8);
+
+      await actionHandler.scheduleMaintenance(this.config.id, {
+        title: `Pre-Storm Inspection: ${analysisPayload.region || &quot;Region&quot;}`,
+        description: `Pre-storm inspection and preparation for expected weather event`,
+        assetId: analysisPayload.region || &quot;region-default&quot;,
+        assetType: &quot;region&quot;,
+        assetName: analysisPayload.region || &quot;Default Region&quot;,
+        maintenanceType: &quot;preventive&quot;,
+        priority: severity === &quot;critical&quot; ? &quot;urgent&quot; : &quot;high&quot;,
+        scheduledStart: startDate,
+        scheduledEnd: endDate,
+        notes: `Triggered by storm analysis. Severity: ${severity}`
+      });
+      actionsExecuted.push(&quot;scheduled_maintenance&quot;);
+    }
+
+    return {
+      success: true,
+      action,
+      data: {
+        analysis: content,
+        region: analysisPayload.region || &quot;default&quot;,
+        timestamp: new Date().toISOString(),
+        actionsExecuted,
+      },
+      confidenceScore: 0.85,
+      tokenUsage,
+    };
+  }
+}
+
+export const stormResilienceAgent = new StormResilienceAgent();
+</code></pre>
+  </div>
+</div>
+<div class="section">
+  <h1>7. Claim 5: Adaptive Card Rendering System</h1>
+
+  <div class="file-section">
+    <div class="file-header">📄 adaptive-cards/capacity-check-card.tsx</div>
+    <pre><code>import { Card, CardContent, CardHeader } from &quot;@/components/ui/card&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { 
+  MapPin, 
+  CheckCircle2, 
+  XCircle,
+  Zap,
+  Building2,
+  ArrowRight,
+  Clock,
+  DollarSign
+} from &quot;lucide-react&quot;;
+import type { CapacityCheck } from &quot;@shared/schema&quot;;
+import { MockDataBanner } from &quot;@/components/mock-data-banner&quot;;
+
+interface CapacityCheckCardProps {
+  data: CapacityCheck;
+  isMockData?: boolean;
+}
+
+export function CapacityCheckCard({ data, isMockData = false }: CapacityCheckCardProps) {
+  const { requestedCapacityMw, location, nearbySubstations, recommendation } = data;
+
+  return (
+    &lt;Card className=&quot;w-full max-w-3xl border-card-border&quot; data-testid=&quot;card-capacity-check&quot;&gt;
+      {isMockData &amp;&amp; (
+        &lt;div className=&quot;px-6 pt-4&quot;&gt;
+          &lt;MockDataBanner /&gt;
+        &lt;/div&gt;
+      )}
+      &lt;CardHeader className=&quot;pb-4&quot;&gt;
+        &lt;div className=&quot;flex items-start justify-between gap-4&quot;&gt;
+          &lt;div className=&quot;flex items-center gap-3&quot;&gt;
+            &lt;div className=&quot;p-2 rounded-lg bg-chart-2/10&quot;&gt;
+              &lt;Zap className=&quot;h-5 w-5 text-chart-2&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+              &lt;h3 className=&quot;text-lg font-semibold&quot;&gt;Capacity Check Results&lt;/h3&gt;
+              &lt;p className=&quot;text-sm text-muted-foreground&quot;&gt;
+                Request: {requestedCapacityMw} MW
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          {recommendation.feasible ? (
+            &lt;Badge variant=&quot;outline&quot; className=&quot;text-chart-2 border-chart-2/30 bg-chart-2/10&quot;&gt;
+              &lt;CheckCircle2 className=&quot;h-3 w-3 mr-1&quot; /&gt;
+              Feasible
+            &lt;/Badge&gt;
+          ) : (
+            &lt;Badge variant=&quot;destructive&quot;&gt;
+              &lt;XCircle className=&quot;h-3 w-3 mr-1&quot; /&gt;
+              Not Feasible
+            &lt;/Badge&gt;
+          )}
+        &lt;/div&gt;
+      &lt;/CardHeader&gt;
+      
+      &lt;CardContent className=&quot;space-y-6&quot;&gt;
+        &lt;div className=&quot;p-4 rounded-lg bg-muted/50 flex items-center gap-3&quot;&gt;
+          &lt;MapPin className=&quot;h-5 w-5 text-muted-foreground flex-shrink-0&quot; /&gt;
+          &lt;div&gt;
+            &lt;p className=&quot;text-sm font-medium&quot;&gt;Requested Location&lt;/p&gt;
+            &lt;p className=&quot;text-xs text-muted-foreground&quot;&gt;
+              {location.latitude.toFixed(4)}, {location.longitude.toFixed(4)}
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div className=&quot;space-y-4&quot;&gt;
+          &lt;h4 className=&quot;text-base font-semibold&quot;&gt;Nearby Substations&lt;/h4&gt;
+          
+          &lt;div className=&quot;space-y-3&quot;&gt;
+            {nearbySubstations.map((sub) =&gt; (
+              &lt;div 
+                key={sub.substationId}
+                className={`p-4 border rounded-lg ${
+                  sub.canServeRequest 
+                    ? &#039;border-chart-2/30 bg-chart-2/5&#039; 
+                    : &#039;border-border&#039;
+                }`}
+                data-testid={`substation-${sub.substationId}`}
+              &gt;
+                &lt;div className=&quot;flex items-start justify-between gap-4&quot;&gt;
+                  &lt;div className=&quot;flex-1&quot;&gt;
+                    &lt;div className=&quot;flex items-center gap-2 flex-wrap&quot;&gt;
+                      &lt;Building2 className=&quot;h-4 w-4 text-muted-foreground&quot; /&gt;
+                      &lt;span className=&quot;font-semibold&quot;&gt;{sub.substationName}&lt;/span&gt;
+                      {sub.canServeRequest &amp;&amp; (
+                        &lt;Badge variant=&quot;outline&quot; className=&quot;text-xs text-chart-2 border-chart-2/30&quot;&gt;
+                          Recommended
+                        &lt;/Badge&gt;
+                      )}
+                    &lt;/div&gt;
+                    &lt;p className=&quot;text-sm text-muted-foreground mt-1&quot;&gt;
+                      {sub.substationId}
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div className=&quot;text-right&quot;&gt;
+                    &lt;p className=&quot;font-medium&quot;&gt;{sub.distanceMiles.toFixed(1)} mi&lt;/p&gt;
+                    &lt;p className=&quot;text-xs text-muted-foreground&quot;&gt;distance&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div className=&quot;mt-3 flex items-center justify-between text-sm&quot;&gt;
+                  &lt;div&gt;
+                    &lt;span className=&quot;text-muted-foreground&quot;&gt;Available:&lt;/span&gt;
+                    &lt;span className={`ml-2 font-medium ${
+                      sub.availableCapacityMw &gt;= requestedCapacityMw 
+                        ? &#039;text-chart-2&#039; 
+                        : &#039;text-destructive&#039;
+                    }`}&gt;
+                      {sub.availableCapacityMw} MW
+                    &lt;/span&gt;
+                  &lt;/div&gt;
+                  {!sub.canServeRequest &amp;&amp; sub.constraintReason &amp;&amp; (
+                    &lt;span className=&quot;text-xs text-muted-foreground italic&quot;&gt;
+                      {sub.constraintReason}
+                    &lt;/span&gt;
+                  )}
+                &lt;/div&gt;
+              &lt;/div&gt;
+            ))}
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        {recommendation.feasible &amp;&amp; recommendation.recommendedSubstation &amp;&amp; (
+          &lt;div className=&quot;p-4 rounded-lg bg-chart-2/10 border border-chart-2/20 space-y-4&quot;&gt;
+            &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+              &lt;CheckCircle2 className=&quot;h-5 w-5 text-chart-2&quot; /&gt;
+              &lt;span className=&quot;font-semibold&quot;&gt;Recommendation&lt;/span&gt;
+            &lt;/div&gt;
+            
+            &lt;div className=&quot;flex items-center gap-3&quot;&gt;
+              &lt;Badge variant=&quot;secondary&quot;&gt;{recommendation.recommendedSubstation}&lt;/Badge&gt;
+              &lt;ArrowRight className=&quot;h-4 w-4 text-muted-foreground&quot; /&gt;
+              &lt;span className=&quot;text-sm&quot;&gt;Best option for your capacity request&lt;/span&gt;
+            &lt;/div&gt;
+
+            &lt;div className=&quot;grid grid-cols-2 gap-4 pt-2&quot;&gt;
+              {recommendation.estimatedCost &amp;&amp; (
+                &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+                  &lt;DollarSign className=&quot;h-4 w-4 text-muted-foreground&quot; /&gt;
+                  &lt;div&gt;
+                    &lt;p className=&quot;text-xs text-muted-foreground&quot;&gt;Estimated Cost&lt;/p&gt;
+                    &lt;p className=&quot;font-medium&quot;&gt;${(recommendation.estimatedCost / 1000000).toFixed(1)}M&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              )}
+              {recommendation.timelineMonths &amp;&amp; (
+                &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+                  &lt;Clock className=&quot;h-4 w-4 text-muted-foreground&quot; /&gt;
+                  &lt;div&gt;
+                    &lt;p className=&quot;text-xs text-muted-foreground&quot;&gt;Timeline&lt;/p&gt;
+                    &lt;p className=&quot;font-medium&quot;&gt;{recommendation.timelineMonths} months&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              )}
+            &lt;/div&gt;
+          &lt;/div&gt;
+        )}
+
+        {recommendation.alternativeOptions.length &gt; 0 &amp;&amp; (
+          &lt;div className=&quot;space-y-2&quot;&gt;
+            &lt;p className=&quot;text-sm font-medium text-muted-foreground&quot;&gt;Alternative Options:&lt;/p&gt;
+            &lt;ul className=&quot;space-y-1&quot;&gt;
+              {recommendation.alternativeOptions.map((option, idx) =&gt; (
+                &lt;li key={idx} className=&quot;text-sm flex items-start gap-2&quot;&gt;
+                  &lt;span className=&quot;text-primary mt-1&quot;&gt;•&lt;/span&gt;
+                  {option}
+                &lt;/li&gt;
+              ))}
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        )}
+
+        &lt;div className=&quot;flex flex-wrap gap-3 pt-2&quot;&gt;
+          &lt;Button variant=&quot;default&quot; size=&quot;sm&quot; data-testid=&quot;button-submit-request&quot;&gt;
+            Submit Connection Request
+          &lt;/Button&gt;
+          &lt;Button variant=&quot;outline&quot; size=&quot;sm&quot; data-testid=&quot;button-view-map&quot;&gt;
+            View on Map
+          &lt;/Button&gt;
+          &lt;Button variant=&quot;outline&quot; size=&quot;sm&quot; data-testid=&quot;button-contact-planner&quot;&gt;
+            Contact Planner
+          &lt;/Button&gt;
+        &lt;/div&gt;
+      &lt;/CardContent&gt;
+    &lt;/Card&gt;
+  );
+}
+</code></pre>
+  </div>
+
+  <div class="file-section">
+    <div class="file-header">📄 adaptive-cards/data-center-impact-card.tsx</div>
+    <pre><code>import { Card, CardContent, CardHeader } from &quot;@/components/ui/card&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Progress } from &quot;@/components/ui/progress&quot;;
+import { 
+  Building2, 
+  Zap, 
+  AlertTriangle, 
+  TrendingUp,
+  ChevronDown,
+  ChevronUp,
+  Download,
+  BarChart3
+} from &quot;lucide-react&quot;;
+import type { DataCenterImpact } from &quot;@shared/schema&quot;;
+import { useState } from &quot;react&quot;;
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from &quot;@/components/ui/collapsible&quot;;
+import { MockDataBanner } from &quot;@/components/mock-data-banner&quot;;
+
+interface DataCenterImpactCardProps {
+  data: DataCenterImpact;
+  isMockData?: boolean;
+}
+
+function getRiskBadgeVariant(risk: string): &quot;destructive&quot; | &quot;default&quot; | &quot;secondary&quot; | &quot;outline&quot; {
+  switch (risk) {
+    case &quot;CRITICAL&quot;:
+      return &quot;destructive&quot;;
+    case &quot;HIGH&quot;:
+      return &quot;default&quot;;
+    case &quot;MEDIUM&quot;:
+      return &quot;secondary&quot;;
+    default:
+      return &quot;outline&quot;;
+  }
+}
+
+function formatNumber(num: number, decimals: number = 1): string {
+  return num.toFixed(decimals);
+}
+
+export function DataCenterImpactCard({ data, isMockData = false }: DataCenterImpactCardProps) {
+  const [expandedSubstations, setExpandedSubstations] = useState&lt;Set&lt;string&gt;&gt;(new Set());
+
+  const toggleSubstation = (id: string) =&gt; {
+    setExpandedSubstations(prev =&gt; {
+      const next = new Set(prev);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+      }
+      return next;
+    });
+  };
+
+  return (
+    &lt;Card className=&quot;w-full max-w-3xl border-card-border&quot; data-testid=&quot;card-datacenter-impact&quot;&gt;
+      {isMockData &amp;&amp; (
+        &lt;div className=&quot;px-6 pt-4&quot;&gt;
+          &lt;MockDataBanner /&gt;
+        &lt;/div&gt;
+      )}
+      &lt;CardHeader className=&quot;flex flex-row items-start justify-between gap-4 pb-4&quot;&gt;
+        &lt;div className=&quot;flex-1&quot;&gt;
+          &lt;div className=&quot;flex items-center gap-2 mb-2&quot;&gt;
+            &lt;Building2 className=&quot;h-5 w-5 text-primary&quot; /&gt;
+            &lt;h3 className=&quot;text-lg font-semibold&quot;&gt;Data Center Impact Analysis&lt;/h3&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;flex flex-wrap items-center gap-4 text-sm text-muted-foreground&quot;&gt;
+            &lt;span&gt;Region: &lt;span className=&quot;font-medium text-foreground&quot;&gt;{data.summary.region}&lt;/span&gt;&lt;/span&gt;
+            &lt;span&gt;Time Horizon: &lt;span className=&quot;font-medium text-foreground&quot;&gt;10 Years&lt;/span&gt;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;span className=&quot;text-xs text-muted-foreground whitespace-nowrap&quot;&gt;{data.summary.analysisDate}&lt;/span&gt;
+      &lt;/CardHeader&gt;
+      
+      &lt;CardContent className=&quot;space-y-6&quot;&gt;
+        &lt;div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-6&quot;&gt;
+          &lt;div className=&quot;space-y-1&quot;&gt;
+            &lt;p className=&quot;text-xs font-semibold uppercase tracking-wide text-muted-foreground&quot;&gt;Data Centers&lt;/p&gt;
+            &lt;p className=&quot;text-3xl font-bold&quot; data-testid=&quot;text-total-datacenters&quot;&gt;{data.summary.totalDataCenters}&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;space-y-1&quot;&gt;
+            &lt;p className=&quot;text-xs font-semibold uppercase tracking-wide text-muted-foreground&quot;&gt;Substations&lt;/p&gt;
+            &lt;p className=&quot;text-3xl font-bold&quot; data-testid=&quot;text-total-substations&quot;&gt;{data.summary.totalSubstationsAnalyzed}&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;space-y-1&quot;&gt;
+            &lt;p className=&quot;text-xs font-semibold uppercase tracking-wide text-muted-foreground&quot;&gt;Need Upgrade&lt;/p&gt;
+            &lt;p className=&quot;text-3xl font-bold text-destructive&quot; data-testid=&quot;text-needing-upgrade&quot;&gt;{data.summary.substationsNeedingUpgrade}&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;space-y-1&quot;&gt;
+            &lt;p className=&quot;text-xs font-semibold uppercase tracking-wide text-muted-foreground&quot;&gt;Pipeline MW&lt;/p&gt;
+            &lt;p className=&quot;text-3xl font-bold&quot; data-testid=&quot;text-pipeline-mw&quot;&gt;{data.summary.totalDcCapacityMw}&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div className=&quot;flex items-center justify-between p-4 rounded-lg bg-muted/50&quot;&gt;
+          &lt;div className=&quot;flex items-center gap-3&quot;&gt;
+            &lt;TrendingUp className=&quot;h-5 w-5 text-chart-4&quot; /&gt;
+            &lt;span className=&quot;font-medium&quot;&gt;Estimated Investment Required&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;span className=&quot;text-xl font-bold&quot; data-testid=&quot;text-investment&quot;&gt;
+            ${formatNumber(data.summary.estimatedTotalInvestmentMillions, 1)}M
+          &lt;/span&gt;
+        &lt;/div&gt;
+
+        &lt;div className=&quot;space-y-4&quot;&gt;
+          &lt;h4 className=&quot;text-base font-semibold&quot;&gt;Top 5 Impacted Substations&lt;/h4&gt;
+          
+          &lt;div className=&quot;space-y-3&quot;&gt;
+            {data.topImpactedSubstations.slice(0, 5).map((sub) =&gt; (
+              &lt;Collapsible 
+                key={sub.substationId}
+                open={expandedSubstations.has(sub.substationId)}
+                onOpenChange={() =&gt; toggleSubstation(sub.substationId)}
+              &gt;
+                &lt;div className=&quot;border border-border rounded-lg overflow-visible&quot;&gt;
+                  &lt;CollapsibleTrigger asChild&gt;
+                    &lt;button 
+                      className=&quot;w-full p-4 text-left hover-elevate active-elevate-2 rounded-lg transition-colors&quot;
+                      data-testid={`button-substation-${sub.substationId}`}
+                    &gt;
+                      &lt;div className=&quot;flex items-start justify-between gap-4&quot;&gt;
+                        &lt;div className=&quot;flex-1 min-w-0&quot;&gt;
+                          &lt;div className=&quot;flex items-center gap-2 flex-wrap&quot;&gt;
+                            &lt;span className=&quot;font-semibold truncate&quot;&gt;{sub.substationName}&lt;/span&gt;
+                            &lt;span className=&quot;text-sm text-muted-foreground&quot;&gt;{sub.substationId}&lt;/span&gt;
+                          &lt;/div&gt;
+                          &lt;div className=&quot;flex items-center gap-4 mt-2&quot;&gt;
+                            &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+                              &lt;Progress 
+                                value={Math.min(sub.utilizationPercent, 100)} 
+                                className=&quot;w-24 h-2&quot;
+                              /&gt;
+                              &lt;span className={`text-sm font-medium ${
+                                sub.utilizationPercent &gt; 100 ? &#039;text-destructive&#039; : 
+                                sub.utilizationPercent &gt; 85 ? &#039;text-chart-4&#039; : &#039;text-chart-2&#039;
+                              }`}&gt;
+                                {formatNumber(sub.utilizationPercent, 1)}%
+                              &lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;span className=&quot;text-sm text-muted-foreground&quot;&gt;{sub.capacityMva} MVA&lt;/span&gt;
+                          &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+                          &lt;Badge variant={getRiskBadgeVariant(sub.riskLevel)} className=&quot;text-xs&quot;&gt;
+                            {sub.riskLevel}
+                          &lt;/Badge&gt;
+                          {expandedSubstations.has(sub.substationId) ? (
+                            &lt;ChevronUp className=&quot;h-4 w-4 text-muted-foreground&quot; /&gt;
+                          ) : (
+                            &lt;ChevronDown className=&quot;h-4 w-4 text-muted-foreground&quot; /&gt;
+                          )}
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                    &lt;/button&gt;
+                  &lt;/CollapsibleTrigger&gt;
+                  
+                  &lt;CollapsibleContent&gt;
+                    &lt;div className=&quot;px-4 pb-4 pt-2 border-t border-border space-y-3&quot;&gt;
+                      &lt;div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-4 text-sm&quot;&gt;
+                        &lt;div&gt;
+                          &lt;span className=&quot;text-muted-foreground&quot;&gt;Current Load:&lt;/span&gt;
+                          &lt;span className=&quot;ml-2 font-medium&quot;&gt;{sub.currentLoadMw} MW&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                          &lt;span className=&quot;text-muted-foreground&quot;&gt;Forecast Load:&lt;/span&gt;
+                          &lt;span className=&quot;ml-2 font-medium&quot;&gt;{sub.forecastLoadMw} MW&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                          &lt;span className=&quot;text-muted-foreground&quot;&gt;New DC Load:&lt;/span&gt;
+                          &lt;span className=&quot;ml-2 font-medium&quot;&gt;{sub.dcLoadMw} MW&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div&gt;
+                          &lt;span className=&quot;text-muted-foreground&quot;&gt;Feeders:&lt;/span&gt;
+                          &lt;span className=&quot;ml-2 font-medium&quot;&gt;{sub.feederCount}&lt;/span&gt;
+                        &lt;/div&gt;
+                      &lt;/div&gt;
+                      
+                      {sub.needsUpgrade &amp;&amp; sub.estimatedUpgradeCostMillions &amp;&amp; (
+                        &lt;div className=&quot;flex items-center gap-2 p-3 rounded-md bg-destructive/10 text-sm&quot;&gt;
+                          &lt;AlertTriangle className=&quot;h-4 w-4 text-destructive flex-shrink-0&quot; /&gt;
+                          &lt;span&gt;
+                            Upgrade Required: Est. ${formatNumber(sub.estimatedUpgradeCostMillions, 1)}M investment needed
+                          &lt;/span&gt;
+                        &lt;/div&gt;
+                      )}
+                    &lt;/div&gt;
+                  &lt;/CollapsibleContent&gt;
+                &lt;/div&gt;
+              &lt;/Collapsible&gt;
+            ))}
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div className=&quot;flex flex-wrap gap-3 pt-2&quot;&gt;
+          &lt;Button variant=&quot;outline&quot; size=&quot;sm&quot; data-testid=&quot;button-view-details&quot;&gt;
+            &lt;BarChart3 className=&quot;h-4 w-4 mr-2&quot; /&gt;
+            View Detailed Analysis
+          &lt;/Button&gt;
+          &lt;Button variant=&quot;outline&quot; size=&quot;sm&quot; data-testid=&quot;button-compare-regions&quot;&gt;
+            Compare with Other Regions
+          &lt;/Button&gt;
+          &lt;Button variant=&quot;outline&quot; size=&quot;sm&quot; data-testid=&quot;button-generate-report&quot;&gt;
+            &lt;Download className=&quot;h-4 w-4 mr-2&quot; /&gt;
+            Generate Report
+          &lt;/Button&gt;
+        &lt;/div&gt;
+      &lt;/CardContent&gt;
+    &lt;/Card&gt;
+  );
+}
+</code></pre>
+  </div>
+
+  <div class="file-section">
+    <div class="file-header">📄 adaptive-cards/load-forecast-card.tsx</div>
+    <pre><code>import { Card, CardContent, CardHeader } from &quot;@/components/ui/card&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { 
+  TrendingUp, 
+  TrendingDown, 
+  Minus,
+  BarChart3,
+  Calendar,
+  Zap
+} from &quot;lucide-react&quot;;
+import type { LoadForecast } from &quot;@shared/schema&quot;;
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from &quot;recharts&quot;;
+import { MockDataBanner } from &quot;@/components/mock-data-banner&quot;;
+
+interface LoadForecastCardProps {
+  data: LoadForecast;
+  isMockData?: boolean;
+}
+
+export function LoadForecastCard({ data, isMockData = false }: LoadForecastCardProps) {
+  const chartData = data.forecast.reduce((acc, item) =&gt; {
+    const existing = acc.find(d =&gt; d.year === item.year);
+    if (existing) {
+      existing[item.scenario] = item.peakMw;
+    } else {
+      acc.push({
+        year: item.year,
+        [item.scenario]: item.peakMw,
+      });
+    }
+    return acc;
+  }, [] as Array&lt;{ year: number; base?: number; high?: number; low?: number }&gt;);
+
+  return (
+    &lt;Card className=&quot;w-full max-w-3xl border-card-border&quot; data-testid=&quot;card-load-forecast&quot;&gt;
+      {isMockData &amp;&amp; (
+        &lt;div className=&quot;px-6 pt-4&quot;&gt;
+          &lt;MockDataBanner /&gt;
+        &lt;/div&gt;
+      )}
+      &lt;CardHeader className=&quot;pb-4&quot;&gt;
+        &lt;div className=&quot;flex items-start justify-between gap-4&quot;&gt;
+          &lt;div className=&quot;flex items-center gap-3&quot;&gt;
+            &lt;div className=&quot;p-2 rounded-lg bg-chart-1/10&quot;&gt;
+              &lt;BarChart3 className=&quot;h-5 w-5 text-chart-1&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+              &lt;h3 className=&quot;text-lg font-semibold&quot;&gt;Load Forecast Analysis&lt;/h3&gt;
+              &lt;p className=&quot;text-sm text-muted-foreground&quot;&gt;
+                {data.nodeType}: {data.nodeId}
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;Badge variant=&quot;outline&quot; className=&quot;text-xs&quot;&gt;
+            &lt;Calendar className=&quot;h-3 w-3 mr-1&quot; /&gt;
+            10-Year Horizon
+          &lt;/Badge&gt;
+        &lt;/div&gt;
+      &lt;/CardHeader&gt;
+      
+      &lt;CardContent className=&quot;space-y-6&quot;&gt;
+        &lt;div className=&quot;p-4 rounded-lg bg-primary/5 border border-primary/20&quot;&gt;
+          &lt;div className=&quot;flex items-center gap-2 mb-2&quot;&gt;
+            &lt;Zap className=&quot;h-4 w-4 text-primary&quot; /&gt;
+            &lt;span className=&quot;font-semibold text-sm&quot;&gt;Current Peak Load&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;p className=&quot;text-3xl font-bold&quot; data-testid=&quot;text-current-peak&quot;&gt;
+            {data.currentPeakMw} MW
+          &lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div className=&quot;aspect-video w-full p-4 border border-border rounded-lg&quot;&gt;
+          &lt;ResponsiveContainer width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+            &lt;LineChart data={chartData}&gt;
+              &lt;CartesianGrid strokeDasharray=&quot;3 3&quot; className=&quot;stroke-border&quot; /&gt;
+              &lt;XAxis 
+                dataKey=&quot;year&quot; 
+                tick={{ fontSize: 12 }}
+                className=&quot;text-muted-foreground&quot;
+              /&gt;
+              &lt;YAxis 
+                tick={{ fontSize: 12 }}
+                className=&quot;text-muted-foreground&quot;
+                label={{ value: &#039;MW&#039;, angle: -90, position: &#039;insideLeft&#039;, fontSize: 12 }}
+              /&gt;
+              &lt;Tooltip 
+                contentStyle={{ 
+                  backgroundColor: &#039;hsl(var(--card))&#039;,
+                  border: &#039;1px solid hsl(var(--border))&#039;,
+                  borderRadius: &#039;8px&#039;,
+                  fontSize: &#039;12px&#039;
+                }}
+              /&gt;
+              &lt;Legend /&gt;
+              &lt;Line 
+                type=&quot;monotone&quot; 
+                dataKey=&quot;base&quot; 
+                stroke=&quot;hsl(var(--chart-1))&quot; 
+                strokeWidth={2}
+                dot={{ r: 3 }}
+                name=&quot;Base Scenario&quot;
+              /&gt;
+              &lt;Line 
+                type=&quot;monotone&quot; 
+                dataKey=&quot;high&quot; 
+                stroke=&quot;hsl(var(--chart-4))&quot; 
+                strokeWidth={2}
+                strokeDasharray=&quot;5 5&quot;
+                dot={{ r: 3 }}
+                name=&quot;High Growth&quot;
+              /&gt;
+              &lt;Line 
+                type=&quot;monotone&quot; 
+                dataKey=&quot;low&quot; 
+                stroke=&quot;hsl(var(--chart-2))&quot; 
+                strokeWidth={2}
+                strokeDasharray=&quot;3 3&quot;
+                dot={{ r: 3 }}
+                name=&quot;Low Growth&quot;
+              /&gt;
+            &lt;/LineChart&gt;
+          &lt;/ResponsiveContainer&gt;
+        &lt;/div&gt;
+
+        &lt;div className=&quot;space-y-4&quot;&gt;
+          &lt;h4 className=&quot;text-base font-semibold&quot;&gt;Scenario Comparison&lt;/h4&gt;
+          
+          &lt;div className=&quot;space-y-2&quot;&gt;
+            {data.comparisonScenarios.map((scenario) =&gt; {
+              const TrendIcon = scenario.deltaPercent &gt; 0 
+                ? TrendingUp 
+                : scenario.deltaPercent &lt; 0 
+                  ? TrendingDown 
+                  : Minus;
+              const trendColor = scenario.deltaPercent &gt; 0 
+                ? &quot;text-chart-4&quot; 
+                : scenario.deltaPercent &lt; 0 
+                  ? &quot;text-chart-2&quot; 
+                  : &quot;text-muted-foreground&quot;;
+
+              return (
+                &lt;div 
+                  key={scenario.scenario}
+                  className=&quot;flex items-center justify-between p-4 border border-border rounded-lg&quot;
+                  data-testid={`scenario-${scenario.scenario}`}
+                &gt;
+                  &lt;div className=&quot;flex items-center gap-3&quot;&gt;
+                    &lt;Badge 
+                      variant={scenario.scenario === &quot;Base&quot; ? &quot;default&quot; : &quot;outline&quot;} 
+                      className=&quot;text-xs&quot;
+                    &gt;
+                      {scenario.scenario}
+                    &lt;/Badge&gt;
+                    &lt;span className=&quot;font-semibold&quot;&gt;{scenario.peakMw} MW&lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;div className={`flex items-center gap-1 ${trendColor}`}&gt;
+                    &lt;TrendIcon className=&quot;h-4 w-4&quot; /&gt;
+                    &lt;span className=&quot;font-medium&quot;&gt;
+                      {scenario.deltaPercent &gt; 0 ? &quot;+&quot; : &quot;&quot;}{scenario.deltaPercent.toFixed(1)}%
+                    &lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              );
+            })}
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div className=&quot;flex flex-wrap gap-3 pt-2&quot;&gt;
+          &lt;Button variant=&quot;outline&quot; size=&quot;sm&quot; data-testid=&quot;button-download-forecast&quot;&gt;
+            Download Forecast Data
+          &lt;/Button&gt;
+          &lt;Button variant=&quot;outline&quot; size=&quot;sm&quot; data-testid=&quot;button-adjust-params&quot;&gt;
+            Adjust Parameters
+          &lt;/Button&gt;
+          &lt;Button variant=&quot;outline&quot; size=&quot;sm&quot; data-testid=&quot;button-compare-nodes&quot;&gt;
+            Compare with Other Nodes
+          &lt;/Button&gt;
+        &lt;/div&gt;
+      &lt;/CardContent&gt;
+    &lt;/Card&gt;
+  );
+}
+</code></pre>
+  </div>
+
+  <div class="file-section">
+    <div class="file-header">📄 adaptive-cards/network-trace-card.tsx</div>
+    <pre><code>import { Card, CardContent, CardHeader } from &quot;@/components/ui/card&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { 
+  Network, 
+  ArrowUp, 
+  ArrowDown, 
+  Users,
+  Ruler,
+  Layers,
+  AlertCircle,
+  CheckCircle2,
+  AlertTriangle
+} from &quot;lucide-react&quot;;
+import type { NetworkTrace } from &quot;@shared/schema&quot;;
+import { MockDataBanner } from &quot;@/components/mock-data-banner&quot;;
+
+interface NetworkTraceCardProps {
+  data: NetworkTrace;
+  isMockData?: boolean;
+}
+
+function getStatusIcon(status: string) {
+  switch (status) {
+    case &quot;FAULT&quot;:
+      return &lt;AlertCircle className=&quot;h-4 w-4 text-destructive&quot; /&gt;;
+    case &quot;WARNING&quot;:
+      return &lt;AlertTriangle className=&quot;h-4 w-4 text-chart-4&quot; /&gt;;
+    default:
+      return &lt;CheckCircle2 className=&quot;h-4 w-4 text-chart-2&quot; /&gt;;
+  }
+}
+
+function getStatusBadgeVariant(status: string): &quot;destructive&quot; | &quot;default&quot; | &quot;secondary&quot; | &quot;outline&quot; {
+  switch (status) {
+    case &quot;FAULT&quot;:
+      return &quot;destructive&quot;;
+    case &quot;WARNING&quot;:
+      return &quot;default&quot;;
+    default:
+      return &quot;outline&quot;;
+  }
+}
+
+export function NetworkTraceCard({ data, isMockData = false }: NetworkTraceCardProps) {
+  const DirectionIcon = data.traceDirection === &quot;upstream&quot; ? ArrowUp : ArrowDown;
+
+  return (
+    &lt;Card className=&quot;w-full max-w-3xl border-card-border&quot; data-testid=&quot;card-network-trace&quot;&gt;
+      {isMockData &amp;&amp; (
+        &lt;div className=&quot;px-6 pt-4&quot;&gt;
+          &lt;MockDataBanner /&gt;
+        &lt;/div&gt;
+      )}
+      &lt;CardHeader className=&quot;pb-4&quot;&gt;
+        &lt;div className=&quot;flex items-start justify-between gap-4&quot;&gt;
+          &lt;div className=&quot;flex items-center gap-3&quot;&gt;
+            &lt;div className=&quot;p-2 rounded-lg bg-chart-3/10&quot;&gt;
+              &lt;Network className=&quot;h-5 w-5 text-chart-3&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+              &lt;h3 className=&quot;text-lg font-semibold&quot;&gt;Network Trace Results&lt;/h3&gt;
+              &lt;p className=&quot;text-sm text-muted-foreground&quot;&gt;
+                {data.assetType}: {data.assetId}
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;Badge variant=&quot;secondary&quot; className=&quot;text-xs&quot;&gt;
+            &lt;DirectionIcon className=&quot;h-3 w-3 mr-1&quot; /&gt;
+            {data.traceDirection.charAt(0).toUpperCase() + data.traceDirection.slice(1)}
+          &lt;/Badge&gt;
+        &lt;/div&gt;
+      &lt;/CardHeader&gt;
+      
+      &lt;CardContent className=&quot;space-y-6&quot;&gt;
+        &lt;div className=&quot;grid grid-cols-3 gap-6&quot;&gt;
+          &lt;div className=&quot;space-y-1 text-center p-4 rounded-lg bg-muted/50&quot;&gt;
+            &lt;Layers className=&quot;h-5 w-5 mx-auto text-muted-foreground mb-2&quot; /&gt;
+            &lt;p className=&quot;text-2xl font-bold&quot; data-testid=&quot;text-total-elements&quot;&gt;
+              {data.summary.totalElements}
+            &lt;/p&gt;
+            &lt;p className=&quot;text-xs text-muted-foreground&quot;&gt;Elements&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;space-y-1 text-center p-4 rounded-lg bg-muted/50&quot;&gt;
+            &lt;Users className=&quot;h-5 w-5 mx-auto text-muted-foreground mb-2&quot; /&gt;
+            &lt;p className=&quot;text-2xl font-bold&quot; data-testid=&quot;text-total-customers&quot;&gt;
+              {data.summary.totalCustomers.toLocaleString()}
+            &lt;/p&gt;
+            &lt;p className=&quot;text-xs text-muted-foreground&quot;&gt;Customers&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;space-y-1 text-center p-4 rounded-lg bg-muted/50&quot;&gt;
+            &lt;Ruler className=&quot;h-5 w-5 mx-auto text-muted-foreground mb-2&quot; /&gt;
+            &lt;p className=&quot;text-2xl font-bold&quot; data-testid=&quot;text-total-distance&quot;&gt;
+              {data.summary.totalDistanceMiles.toFixed(1)}
+            &lt;/p&gt;
+            &lt;p className=&quot;text-xs text-muted-foreground&quot;&gt;Miles&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div className=&quot;space-y-4&quot;&gt;
+          &lt;h4 className=&quot;text-base font-semibold&quot;&gt;Trace Path&lt;/h4&gt;
+          
+          &lt;div className=&quot;relative&quot;&gt;
+            &lt;div className=&quot;absolute left-4 top-0 bottom-0 w-0.5 bg-border&quot; /&gt;
+            
+            &lt;div className=&quot;space-y-3&quot;&gt;
+              {data.traceElements.map((element, idx) =&gt; (
+                &lt;div 
+                  key={element.elementId}
+                  className=&quot;relative pl-10 pr-4 py-3&quot;
+                  data-testid={`trace-element-${element.elementId}`}
+                &gt;
+                  &lt;div className=&quot;absolute left-2 top-4 w-4 h-4 rounded-full bg-background border-2 border-primary flex items-center justify-center&quot;&gt;
+                    &lt;div className=&quot;w-2 h-2 rounded-full bg-primary&quot; /&gt;
+                  &lt;/div&gt;
+                  
+                  &lt;div className=&quot;p-4 border border-border rounded-lg hover-elevate&quot;&gt;
+                    &lt;div className=&quot;flex items-start justify-between gap-4&quot;&gt;
+                      &lt;div className=&quot;flex-1 min-w-0&quot;&gt;
+                        &lt;div className=&quot;flex items-center gap-2 flex-wrap&quot;&gt;
+                          &lt;span className=&quot;font-semibold&quot;&gt;{element.name}&lt;/span&gt;
+                          &lt;Badge variant=&quot;outline&quot; className=&quot;text-xs&quot;&gt;
+                            {element.elementType}
+                          &lt;/Badge&gt;
+                          &lt;Badge variant={getStatusBadgeVariant(element.status)} className=&quot;text-xs&quot;&gt;
+                            {getStatusIcon(element.status)}
+                            &lt;span className=&quot;ml-1&quot;&gt;{element.status}&lt;/span&gt;
+                          &lt;/Badge&gt;
+                        &lt;/div&gt;
+                        &lt;p className=&quot;text-sm text-muted-foreground mt-1&quot;&gt;
+                          {element.elementId}
+                        &lt;/p&gt;
+                      &lt;/div&gt;
+                      &lt;div className=&quot;text-right text-sm&quot;&gt;
+                        &lt;p className=&quot;text-muted-foreground&quot;&gt;{element.distance.toFixed(2)} mi&lt;/p&gt;
+                        {element.customersDownstream !== undefined &amp;&amp; (
+                          &lt;p className=&quot;text-xs text-muted-foreground mt-1&quot;&gt;
+                            {element.customersDownstream.toLocaleString()} customers
+                          &lt;/p&gt;
+                        )}
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              ))}
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div className=&quot;flex flex-wrap gap-3 pt-2&quot;&gt;
+          &lt;Button variant=&quot;outline&quot; size=&quot;sm&quot; data-testid=&quot;button-trace-opposite&quot;&gt;
+            &lt;DirectionIcon className=&quot;h-4 w-4 mr-2 rotate-180&quot; /&gt;
+            Trace {data.traceDirection === &quot;upstream&quot; ? &quot;Downstream&quot; : &quot;Upstream&quot;}
+          &lt;/Button&gt;
+          &lt;Button variant=&quot;outline&quot; size=&quot;sm&quot; data-testid=&quot;button-view-map&quot;&gt;
+            View on Map
+          &lt;/Button&gt;
+          &lt;Button variant=&quot;outline&quot; size=&quot;sm&quot; data-testid=&quot;button-export-trace&quot;&gt;
+            Export Trace Data
+          &lt;/Button&gt;
+        &lt;/div&gt;
+      &lt;/CardContent&gt;
+    &lt;/Card&gt;
+  );
+}
+</code></pre>
+  </div>
+
+  <div class="file-section">
+    <div class="file-header">📄 adaptive-cards/storm-resilience-card.tsx</div>
+    <pre><code>import { Card, CardContent, CardHeader } from &quot;@/components/ui/card&quot;;
+import { Badge } from &quot;@/components/ui/badge&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Progress } from &quot;@/components/ui/progress&quot;;
+import { 
+  Cloud, 
+  Wind, 
+  Users, 
+  AlertTriangle,
+  Clock,
+  Shield,
+  MapPin
+} from &quot;lucide-react&quot;;
+import type { StormResilience } from &quot;@shared/schema&quot;;
+import { MockDataBanner } from &quot;@/components/mock-data-banner&quot;;
+
+interface StormResilienceCardProps {
+  data: StormResilience;
+  isMockData?: boolean;
+}
+
+function getWindZoneBadgeVariant(zone: string): &quot;destructive&quot; | &quot;default&quot; | &quot;secondary&quot; | &quot;outline&quot; {
+  switch (zone) {
+    case &quot;EXTREME&quot;:
+      return &quot;destructive&quot;;
+    case &quot;HIGH&quot;:
+      return &quot;default&quot;;
+    case &quot;MODERATE&quot;:
+      return &quot;secondary&quot;;
+    default:
+      return &quot;outline&quot;;
+  }
+}
+
+function formatNumber(num: number): string {
+  return new Intl.NumberFormat().format(num);
+}
+
+export function StormResilienceCard({ data, isMockData = false }: StormResilienceCardProps) {
+  const { storm, impactSummary, affectedSubstations } = data;
+
+  return (
+    &lt;Card className=&quot;w-full max-w-3xl border-card-border&quot; data-testid=&quot;card-storm-resilience&quot;&gt;
+      {isMockData &amp;&amp; (
+        &lt;div className=&quot;px-6 pt-4&quot;&gt;
+          &lt;MockDataBanner /&gt;
+        &lt;/div&gt;
+      )}
+      &lt;CardHeader className=&quot;pb-4&quot;&gt;
+        &lt;div className=&quot;flex items-start justify-between gap-4&quot;&gt;
+          &lt;div className=&quot;flex items-center gap-3&quot;&gt;
+            &lt;div className=&quot;p-2 rounded-lg bg-chart-5/10&quot;&gt;
+              &lt;Cloud className=&quot;h-5 w-5 text-chart-5&quot; /&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+              &lt;h3 className=&quot;text-lg font-semibold&quot;&gt;Storm Resilience Assessment&lt;/h3&gt;
+              &lt;p className=&quot;text-sm text-muted-foreground&quot;&gt;
+                {storm.name} - Category {storm.category}
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;Badge variant=&quot;destructive&quot; className=&quot;text-xs&quot;&gt;
+            &lt;Wind className=&quot;h-3 w-3 mr-1&quot; /&gt;
+            {storm.windSpeedMph} mph
+          &lt;/Badge&gt;
+        &lt;/div&gt;
+      &lt;/CardHeader&gt;
+      
+      &lt;CardContent className=&quot;space-y-6&quot;&gt;
+        &lt;div className=&quot;p-4 rounded-lg bg-destructive/5 border border-destructive/20&quot;&gt;
+          &lt;div className=&quot;flex items-center gap-2 mb-3&quot;&gt;
+            &lt;AlertTriangle className=&quot;h-4 w-4 text-destructive&quot; /&gt;
+            &lt;span className=&quot;font-semibold text-sm&quot;&gt;Impact Summary&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;grid grid-cols-2 md:grid-cols-4 gap-4&quot;&gt;
+            &lt;div className=&quot;space-y-1&quot;&gt;
+              &lt;p className=&quot;text-xs text-muted-foreground&quot;&gt;Customers at Risk&lt;/p&gt;
+              &lt;p className=&quot;text-2xl font-bold&quot; data-testid=&quot;text-customers-risk&quot;&gt;
+                {formatNumber(impactSummary.totalCustomersAtRisk)}
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div className=&quot;space-y-1&quot;&gt;
+              &lt;p className=&quot;text-xs text-muted-foreground&quot;&gt;Critical Facilities&lt;/p&gt;
+              &lt;p className=&quot;text-2xl font-bold&quot; data-testid=&quot;text-critical-facilities&quot;&gt;
+                {impactSummary.criticalFacilitiesAtRisk}
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div className=&quot;space-y-1&quot;&gt;
+              &lt;p className=&quot;text-xs text-muted-foreground&quot;&gt;Substations in Path&lt;/p&gt;
+              &lt;p className=&quot;text-2xl font-bold&quot; data-testid=&quot;text-substations-path&quot;&gt;
+                {impactSummary.substationsInPath}
+              &lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div className=&quot;space-y-1&quot;&gt;
+              &lt;p className=&quot;text-xs text-muted-foreground&quot;&gt;Est. Restoration&lt;/p&gt;
+              &lt;p className=&quot;text-2xl font-bold&quot; data-testid=&quot;text-restoration-hours&quot;&gt;
+                {impactSummary.estimatedRestorationHours}h
+              &lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div className=&quot;space-y-2&quot;&gt;
+          &lt;div className=&quot;flex items-center justify-between&quot;&gt;
+            &lt;span className=&quot;text-sm font-medium&quot;&gt;Overall Risk Score&lt;/span&gt;
+            &lt;span className=&quot;text-sm font-bold&quot;&gt;{impactSummary.riskScore}/100&lt;/span&gt;
+          &lt;/div&gt;
+          &lt;Progress 
+            value={impactSummary.riskScore} 
+            className=&quot;h-3&quot;
+          /&gt;
+        &lt;/div&gt;
+
+        &lt;div className=&quot;space-y-3&quot;&gt;
+          &lt;div className=&quot;flex items-center gap-2&quot;&gt;
+            &lt;MapPin className=&quot;h-4 w-4 text-muted-foreground&quot; /&gt;
+            &lt;span className=&quot;text-sm text-muted-foreground&quot;&gt;
+              Expected landfall: {new Date(storm.estimatedLandfall).toLocaleString()}
+            &lt;/span&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;flex flex-wrap gap-2&quot;&gt;
+            {storm.affectedRegions.map((region) =&gt; (
+              &lt;Badge key={region} variant=&quot;outline&quot; className=&quot;text-xs&quot;&gt;
+                {region}
+              &lt;/Badge&gt;
+            ))}
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div className=&quot;space-y-4&quot;&gt;
+          &lt;h4 className=&quot;text-base font-semibold flex items-center gap-2&quot;&gt;
+            &lt;Shield className=&quot;h-4 w-4&quot; /&gt;
+            Affected Substations
+          &lt;/h4&gt;
+          
+          &lt;div className=&quot;space-y-3&quot;&gt;
+            {affectedSubstations.map((sub) =&gt; (
+              &lt;div 
+                key={sub.substationId}
+                className=&quot;p-4 border border-border rounded-lg space-y-3&quot;
+                data-testid={`card-substation-${sub.substationId}`}
+              &gt;
+                &lt;div className=&quot;flex items-start justify-between gap-4&quot;&gt;
+                  &lt;div&gt;
+                    &lt;div className=&quot;flex items-center gap-2 flex-wrap&quot;&gt;
+                      &lt;span className=&quot;font-semibold&quot;&gt;{sub.substationName}&lt;/span&gt;
+                      &lt;Badge variant={getWindZoneBadgeVariant(sub.windZone)} className=&quot;text-xs&quot;&gt;
+                        {sub.windZone} Wind Zone
+                      &lt;/Badge&gt;
+                    &lt;/div&gt;
+                    &lt;p className=&quot;text-sm text-muted-foreground mt-1&quot;&gt;
+                      {sub.substationId}
+                    &lt;/p&gt;
+                  &lt;/div&gt;
+                  &lt;div className=&quot;text-right&quot;&gt;
+                    &lt;p className=&quot;text-sm text-muted-foreground&quot;&gt;Vulnerability&lt;/p&gt;
+                    &lt;p className=&quot;font-bold&quot;&gt;{sub.vulnerabilityScore}/100&lt;/p&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                
+                &lt;div className=&quot;flex flex-wrap gap-4 text-sm&quot;&gt;
+                  &lt;div className=&quot;flex items-center gap-1&quot;&gt;
+                    &lt;Users className=&quot;h-4 w-4 text-muted-foreground&quot; /&gt;
+                    &lt;span&gt;{formatNumber(sub.customersServed)} customers&lt;/span&gt;
+                  &lt;/div&gt;
+                  &lt;div className=&quot;flex items-center gap-1&quot;&gt;
+                    &lt;AlertTriangle className=&quot;h-4 w-4 text-chart-4&quot; /&gt;
+                    &lt;span&gt;{sub.criticalLoads} critical loads&lt;/span&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+                {sub.recommendedActions.length &gt; 0 &amp;&amp; (
+                  &lt;div className=&quot;space-y-2&quot;&gt;
+                    &lt;p className=&quot;text-xs font-semibold uppercase tracking-wide text-muted-foreground&quot;&gt;
+                      Recommended Actions
+                    &lt;/p&gt;
+                    &lt;ul className=&quot;space-y-1&quot;&gt;
+                      {sub.recommendedActions.map((action, idx) =&gt; (
+                        &lt;li key={idx} className=&quot;text-sm flex items-start gap-2&quot;&gt;
+                          &lt;span className=&quot;text-chart-2 mt-1&quot;&gt;•&lt;/span&gt;
+                          {action}
+                        &lt;/li&gt;
+                      ))}
+                    &lt;/ul&gt;
+                  &lt;/div&gt;
+                )}
+              &lt;/div&gt;
+            ))}
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div className=&quot;flex flex-wrap gap-3 pt-2&quot;&gt;
+          &lt;Button variant=&quot;default&quot; size=&quot;sm&quot; data-testid=&quot;button-activate-response&quot;&gt;
+            Activate Emergency Response
+          &lt;/Button&gt;
+          &lt;Button variant=&quot;outline&quot; size=&quot;sm&quot; data-testid=&quot;button-view-map&quot;&gt;
+            View Storm Path Map
+          &lt;/Button&gt;
+          &lt;Button variant=&quot;outline&quot; size=&quot;sm&quot; data-testid=&quot;button-crew-status&quot;&gt;
+            &lt;Clock className=&quot;h-4 w-4 mr-2&quot; /&gt;
+            Check Crew Status
+          &lt;/Button&gt;
+        &lt;/div&gt;
+      &lt;/CardContent&gt;
+    &lt;/Card&gt;
+  );
+}
+</code></pre>
+  </div>
+
+  <div class="file-section">
+    <div class="file-header">📄 chat/chat-input.tsx</div>
+    <pre><code>import { useState, useRef, useEffect } from &quot;react&quot;;
+import { Button } from &quot;@/components/ui/button&quot;;
+import { Textarea } from &quot;@/components/ui/textarea&quot;;
+import { Send, Sparkles } from &quot;lucide-react&quot;;
+
+interface ChatInputProps {
+  onSend: (message: string) =&gt; void;
+  isLoading?: boolean;
+  placeholder?: string;
+}
+
+const QUICK_PROMPTS = [
+  &quot;Show data center impacts in Georgia&quot;,
+  &quot;Analyze storm resilience for Hurricane Alpha&quot;,
+  &quot;Trace network upstream from SUB-001&quot;,
+  &quot;Get load forecast for SUB-ATL-001&quot;,
+  &quot;Check capacity for 50MW at coordinates 33.7, -84.4&quot;
+];
+
+export function ChatInput({ onSend, isLoading = false, placeholder }: ChatInputProps) {
+  const [message, setMessage] = useState(&quot;&quot;);
+  const textareaRef = useRef&lt;HTMLTextAreaElement&gt;(null);
+
+  const handleSubmit = () =&gt; {
+    if (message.trim() &amp;&amp; !isLoading) {
+      onSend(message.trim());
+      setMessage(&quot;&quot;);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) =&gt; {
+    if (e.key === &quot;Enter&quot; &amp;&amp; !e.shiftKey) {
+      e.preventDefault();
+      handleSubmit();
+    }
+  };
+
+  const handleQuickPrompt = (prompt: string) =&gt; {
+    setMessage(prompt);
+    textareaRef.current?.focus();
+  };
+
+  useEffect(() =&gt; {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = &quot;auto&quot;;
+      textareaRef.current.style.height = `${Math.min(textareaRef.current.scrollHeight, 150)}px`;
+    }
+  }, [message]);
+
+  return (
+    &lt;div className=&quot;space-y-3&quot;&gt;
+      &lt;div className=&quot;flex flex-wrap gap-2&quot;&gt;
+        {QUICK_PROMPTS.map((prompt, idx) =&gt; (
+          &lt;Button
+            key={idx}
+            variant=&quot;outline&quot;
+            size=&quot;sm&quot;
+            onClick={() =&gt; handleQuickPrompt(prompt)}
+            className=&quot;text-xs&quot;
+            data-testid={`button-quick-prompt-${idx}`}
+          &gt;
+            &lt;Sparkles className=&quot;h-3 w-3 mr-1&quot; /&gt;
+            {prompt.length &gt; 35 ? prompt.substring(0, 35) + &quot;...&quot; : prompt}
+          &lt;/Button&gt;
+        ))}
+      &lt;/div&gt;
+      
+      &lt;div className=&quot;flex items-end gap-2&quot;&gt;
+        &lt;Textarea
+          ref={textareaRef}
+          value={message}
+          onChange={(e) =&gt; setMessage(e.target.value)}
+          onKeyDown={handleKeyDown}
+          placeholder={placeholder || &quot;Ask about data center impacts, storm resilience, network traces, or capacity...&quot;}
+          className=&quot;min-h-[48px] max-h-[150px] resize-none text-base&quot;
+          disabled={isLoading}
+          data-testid=&quot;input-chat-message&quot;
+        /&gt;
+        &lt;Button
+          onClick={handleSubmit}
+          disabled={!message.trim() || isLoading}
+          size=&quot;icon&quot;
+          className=&quot;flex-shrink-0&quot;
+          data-testid=&quot;button-send-message&quot;
+        &gt;
+          &lt;Send className=&quot;h-4 w-4&quot; /&gt;
+        &lt;/Button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+  </div>
+
+  <div class="file-section">
+    <div class="file-header">📄 chat/chat-message.tsx</div>
+    <pre><code>import type { ChatMessage as ChatMessageType } from &quot;@shared/schema&quot;;
+import { Avatar, AvatarFallback, AvatarImage } from &quot;@/components/ui/avatar&quot;;
+import { DataCenterImpactCard } from &quot;@/components/adaptive-cards/data-center-impact-card&quot;;
+import { StormResilienceCard } from &quot;@/components/adaptive-cards/storm-resilience-card&quot;;
+import { NetworkTraceCard } from &quot;@/components/adaptive-cards/network-trace-card&quot;;
+import { LoadForecastCard } from &quot;@/components/adaptive-cards/load-forecast-card&quot;;
+import { CapacityCheckCard } from &quot;@/components/adaptive-cards/capacity-check-card&quot;;
+import { Bot, User } from &quot;lucide-react&quot;;
+
+interface ChatMessageProps {
+  message: ChatMessageType;
+}
+
+export function ChatMessage({ message }: ChatMessageProps) {
+  const isUser = message.role === &quot;user&quot;;
+
+  const renderCard = () =&gt; {
+    if (!message.cardData || !message.cardType) return null;
+
+    const isMockData = message.isMockData ?? false;
+
+    switch (message.cardType) {
+      case &quot;datacenter-impact&quot;:
+        return &lt;DataCenterImpactCard data={message.cardData} isMockData={isMockData} /&gt;;
+      case &quot;storm-resilience&quot;:
+        return &lt;StormResilienceCard data={message.cardData} isMockData={isMockData} /&gt;;
+      case &quot;network-trace&quot;:
+        return &lt;NetworkTraceCard data={message.cardData} isMockData={isMockData} /&gt;;
+      case &quot;load-forecast&quot;:
+        return &lt;LoadForecastCard data={message.cardData} isMockData={isMockData} /&gt;;
+      case &quot;capacity-check&quot;:
+        return &lt;CapacityCheckCard data={message.cardData} isMockData={isMockData} /&gt;;
+      default:
+        return null;
+    }
+  };
+
+  return (
+    &lt;div 
+      className={`flex gap-4 ${isUser ? &#039;justify-end&#039; : &#039;justify-start&#039;}`}
+      data-testid={`message-${message.id}`}
+    &gt;
+      {!isUser &amp;&amp; (
+        &lt;Avatar className=&quot;h-8 w-8 flex-shrink-0&quot;&gt;
+          &lt;AvatarFallback className=&quot;bg-primary text-primary-foreground&quot;&gt;
+            &lt;Bot className=&quot;h-4 w-4&quot; /&gt;
+          &lt;/AvatarFallback&gt;
+        &lt;/Avatar&gt;
+      )}
+      
+      &lt;div className={`flex flex-col gap-2 ${isUser ? &#039;items-end&#039; : &#039;items-start&#039;} max-w-2xl`}&gt;
+        {message.content &amp;&amp; (
+          &lt;div 
+            className={`px-4 py-3 rounded-lg ${
+              isUser 
+                ? &#039;bg-primary text-primary-foreground&#039; 
+                : &#039;bg-muted text-foreground&#039;
+            }`}
+          &gt;
+            &lt;p className=&quot;text-sm whitespace-pre-wrap&quot;&gt;{message.content}&lt;/p&gt;
+          &lt;/div&gt;
+        )}
+        
+        {message.cardType &amp;&amp; message.cardType !== &quot;text&quot; &amp;&amp; renderCard()}
+        
+        &lt;span className=&quot;text-xs text-muted-foreground px-1&quot;&gt;
+          {new Date(message.timestamp).toLocaleTimeString([], { 
+            hour: &#039;2-digit&#039;, 
+            minute: &#039;2-digit&#039; 
+          })}
+        &lt;/span&gt;
+      &lt;/div&gt;
+      
+      {isUser &amp;&amp; (
+        &lt;Avatar className=&quot;h-8 w-8 flex-shrink-0&quot;&gt;
+          &lt;AvatarFallback className=&quot;bg-secondary text-secondary-foreground&quot;&gt;
+            &lt;User className=&quot;h-4 w-4&quot; /&gt;
+          &lt;/AvatarFallback&gt;
+        &lt;/Avatar&gt;
+      )}
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+  </div>
+
+  <div class="file-section">
+    <div class="file-header">📄 chat/typing-indicator.tsx</div>
+    <pre><code>import { Avatar, AvatarFallback } from &quot;@/components/ui/avatar&quot;;
+import { Bot } from &quot;lucide-react&quot;;
+
+export function TypingIndicator() {
+  return (
+    &lt;div className=&quot;flex gap-4 justify-start&quot; data-testid=&quot;typing-indicator&quot;&gt;
+      &lt;Avatar className=&quot;h-8 w-8 flex-shrink-0&quot;&gt;
+        &lt;AvatarFallback className=&quot;bg-primary text-primary-foreground&quot;&gt;
+          &lt;Bot className=&quot;h-4 w-4&quot; /&gt;
+        &lt;/AvatarFallback&gt;
+      &lt;/Avatar&gt;
+      
+      &lt;div className=&quot;flex items-center gap-1 px-4 py-3 rounded-lg bg-muted&quot;&gt;
+        &lt;span className=&quot;w-2 h-2 bg-muted-foreground/50 rounded-full animate-bounce&quot; style={{ animationDelay: &#039;0ms&#039; }} /&gt;
+        &lt;span className=&quot;w-2 h-2 bg-muted-foreground/50 rounded-full animate-bounce&quot; style={{ animationDelay: &#039;150ms&#039; }} /&gt;
+        &lt;span className=&quot;w-2 h-2 bg-muted-foreground/50 rounded-full animate-bounce&quot; style={{ animationDelay: &#039;300ms&#039; }} /&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+  </div>
+</div>
+<div class="section">
+  <h1>8. Shared: Type Definitions</h1>
+
+  <div class="file-section">
+    <div class="file-header">📄 types.ts</div>
+    <pre><code>import { z } from &quot;zod&quot;;
+
+// Trust levels for earned autonomy progression
+export type TrustLevel = &quot;supervised&quot; | &quot;guided&quot; | &quot;semi_autonomous&quot;;
+
+// Agent specialization types
+export type AgentType = 
+  | &quot;supervisor&quot;
+  | &quot;storm_resilience&quot;
+  | &quot;load_forecast&quot;
+  | &quot;grid_topology&quot;
+  | &quot;capacity_check&quot;;
+
+// Action types that agents can perform
+export const ActionType = z.enum([
+  &quot;analyze_storm_resilience&quot;,
+  &quot;forecast_load&quot;,
+  &quot;trace_network&quot;,
+  &quot;check_capacity&quot;,
+  &quot;datacenter_impact&quot;,
+  &quot;query_response&quot;
+]);
+
+export type ActionType = z.infer&lt;typeof ActionType&gt;;
+
+// Message format for agent communication
+export interface AgentMessage {
+  correlationId: string;
+  from: string;
+  to: string;
+  action: ActionType;
+  payload: unknown;
+  timestamp: Date;
+}
+
+// Agent context for decision making
+export interface AgentContext {
+  agentId: string;
+  agentType: AgentType;
+  trustLevel: TrustLevel;
+  trustScore: number;
+  conversationHistory: Array&lt;{ role: string; content: string }&gt;;
+  userQuery: string;
+}
+
+// Result from agent execution
+export interface AgentResult {
+  success: boolean;
+  action: ActionType;
+  data?: unknown;
+  error?: string;
+  confidenceScore: number;
+  tokenUsage?: number;
+  latencyMs?: number;
+  governanceStatus?: &quot;approved&quot; | &quot;pending_review&quot; | &quot;rejected&quot;;
+  agentType?: AgentType;
+  trustLevel?: TrustLevel;
+}
+
+// Governance decision from Averecion
+export interface GovernanceDecision {
+  approved: boolean;
+  requiresHumanReview: boolean;
+  reason?: string;
+  modifiedAction?: ActionType;
+  constraints?: Record&lt;string, unknown&gt;;
+  alignmentScore?: number;
+}
+
+// Agent configuration
+export interface AgentConfig {
+  id: string;
+  type: AgentType;
+  systemPrompt: string;
+  allowedActions: ActionType[];
+  defaultTrustLevel: TrustLevel;
+  maxTokens: number;
+}
+
+// Supervisor routing decision
+export interface RoutingDecision {
+  targetAgent: AgentType;
+  action: ActionType;
+  context: Record&lt;string, unknown&gt;;
+  confidence: number;
+}
+</code></pre>
+  </div>
+</div>
+</body>
+</html>
